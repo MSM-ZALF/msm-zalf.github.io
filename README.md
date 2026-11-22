@@ -48,9 +48,11 @@ quarto render           # builds the site into docs/
 
 1. Create a repository and push this folder to the `main` branch.
 2. In `_quarto.yml`, set `site-url:` to the final URL. Update the `Sitemap:` line in `robots.txt` to match.
-3. **Recommended: GitHub Actions.** `.github/workflows/publish.yml` renders the site and pushes it to the `gh-pages` branch on every push. It also rebuilds weekly, so project and job statuses stay current.
-   Under *Settings → Pages*, choose **Deploy from a branch → `gh-pages` / root**.
-4. *Alternative:* commit the rendered `docs/` folder and choose **Deploy from a branch → `main` / `docs`**.
+3. **GitHub Actions (set up).** `.github/workflows/publish.yml` renders the site and deploys it with GitHub Pages on every push to `main`. It also rebuilds weekly, so project and job statuses stay current, and can be started manually from the *Actions* tab.
+   Under *Settings → Pages → Build and deployment*, **Source** must be **GitHub Actions**.
+4. *Alternative:* remove `/docs/` from `.gitignore`, commit the rendered `docs/` folder and choose **Deploy from a branch → `main` / `docs`**.
+
+Live site: <https://msm-zalf.github.io/> · Repository: <https://github.com/MSM-ZALF/msm-zalf.github.io>
 
 The site works both as a user/organisation site (`<name>.github.io`) and as a project site (`<name>.github.io/<repo>/`).
 
