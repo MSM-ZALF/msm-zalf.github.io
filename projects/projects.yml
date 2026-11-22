@@ -4,7 +4,8 @@
 #
 #  Source: documents/msm/Projects_3rdParty_Funding_Status.xlsx — ONLY rows
 #  with status "Proposal Approved" are listed here (submitted, rejected and
-#  in-preparation proposals are not shown). Durations and the project website
+#  in-preparation proposals are not shown).
+#  Funding amounts are intentionally not published. Durations and the project website
 #  come from the CV where the spreadsheet has none.
 #
 #  Status shown on the site is computed automatically:
@@ -12,7 +13,7 @@
 #    otherwise → Ongoing · no dates → Approved
 #
 #  Fields: acronym, title, call, funder, partners, role, positions,
-#          funding (EUR, as number), start/end ("YYYY-MM" or "YYYY"), url, featured
+#          start/end ("YYYY-MM" or "YYYY"), url, featured
 # =====================================================================
 
 - acronym: "SUSTAIN-Crop"
@@ -22,7 +23,6 @@
   partners: "Coordinator: INNOMINE (Hungary)"
   role: "Work Package Leader / PI"
   positions: "1 PhD (3 years)"
-  funding: 252650
   start: "2026-04"
   end: "2029-03"
   featured: true
@@ -33,7 +33,6 @@
   partners: "Coordinator: ZALF · Partners: PHENO-INSPECT, IIT Kharagpur, Leads Connect"
   role: "Coordinator / PI"
   positions: "1 PhD (3 years)"
-  funding: 247344
   start: "2025-05"
   end: "2028-04"
   featured: true
@@ -45,7 +44,6 @@
   partners: "Coordinator: ZALF · Partners from Spain, Italy, Denmark and the Netherlands"
   role: "Work Package Leader / PI"
   positions: "1 PhD (3 years)"
-  funding: 106055
   start: "2025-05"
   end: "2028-04"
   url: "https://www.agroecologypartnership.eu/agreco4cast"
@@ -55,7 +53,6 @@
   title: "Vorsorgender Bodenerosionsschutz auf landwirtschaftlichen Flächen in der Ostbrandenburger Ackerbauregion (Precautionary soil-erosion protection on agricultural land in the East Brandenburg arable region)"
   funder: "IAT Flex Fund (ZALF)"
   role: "Work Package Leader"
-  funding: 41311
   start: "2026-07"
   end: "2027-06"
   featured: true
@@ -65,14 +62,12 @@
   partners: "Lead applicant: Bodensee-Stiftung · Partners: ZALF, University of Bonn, EDEKA ZENTRALE Stiftung & Co. KG"
   role: "Work Package Leader"
   positions: "1 postdoc"
-  funding: 82800
 
 - acronym: "SAFE-GH"
   title: "Sustainable Agriculture for Food Security and Global Health: Regenerative Systems and Smart Value Chains (symposium)"
   funder: "DWIH + DAAD"
   partners: "Coordinator: ZALF"
   role: "Coordinator"
-  funding: 2915
 
 - acronym: "NEXT-Gen-EXPERT"
   title: "Next-Generation Environmental and eXtended Tools for Extreme Events & Plant Resilience Assessment — FAIRagro use case"
@@ -80,7 +75,6 @@
   partners: "Coordinator: ZALF"
   role: "Coordinator / PI"
   positions: "1 postdoc (2 years)"
-  funding: 207473
   start: "2024-10"
   end: "2026-09"
 
@@ -92,7 +86,6 @@
 #   partners: "Coordinator: … · Partners: …"
 #   role: "Work Package Leader / PI"
 #   positions: "1 PhD (3 years)"
-#   funding: 100000
 #   start: "2027-01"
 #   end: "2029-12"
 #   url: "https://..."

@@ -19,7 +19,6 @@
   };
   const rank = { ongoing: 0, starting: 1, approved: 2, completed: 3 };
   const list = items.slice().sort((a, b) => rank[status(a)[0]] - rank[status(b)[0]] || ((toDate(b.start) || 0) - (toDate(a.start) || 0)));
-  const eur = n => (typeof n === 'number' || /^\d+(\.\d+)?$/.test(String(n))) ? '€' + Math.round(Number(n)).toLocaleString('en-GB') : String(n || '');
 %>
 <div class="msm-stats" style="margin:0 0 2.4rem">
   <div class="msm-stat"><div class="n"><%= items.length %></div><div class="l">approved projects</div></div>
@@ -37,13 +36,12 @@
       <% if (p.partners) { %><dt>Consortium</dt><dd><%= p.partners %></dd><% } %>
       <% if (p.role) { %><dt>MSM role</dt><dd><%= p.role %></dd><% } %>
       <% if (p.positions) { %><dt>Positions</dt><dd><%= p.positions %></dd><% } %>
-      <% if (p.funding) { %><dt>Funding</dt><dd><%= eur(p.funding) %></dd><% } %>
     </dl>
     <% if (p.url) { %><div class="links"><a class="tagpill" href="<%- p.url %>">Project website</a></div><% } %>
   </article>
 <% }) %>
 </div>
-<p class="msm-note">Funding: third-party funds acquired for MSM in each project (EUR). Only approved projects are listed.</p>
+<p class="msm-note">Only approved projects are listed.</p>
 ```
 
 <script>
