@@ -45,37 +45,43 @@ listing:
     </div>
   </div>
   <div class="bb-hero-right">
-    <div class="bb-portrait-wrap">
-      <div class="bb-portrait-glow"></div>
-      <div class="bb-portrait-ring"></div>
-      <div class="bb-portrait msm-scales">
-        <svg viewBox="0 0 400 400" role="img" aria-labelledby="scales-t scales-d">
-          <title id="scales-t">Scales modelled by MSM</title>
-          <desc id="scales-d">Nested circles from field at the centre to farm, landscape, region and market at the outside.</desc>
-          <circle cx="200" cy="200" r="190" fill="#00467D" opacity=".08"/>
-          <circle cx="200" cy="200" r="152" fill="#32672F" opacity=".10"/>
-          <circle cx="200" cy="200" r="114" fill="#4BA046" opacity=".16"/>
-          <circle cx="200" cy="200" r="76"  fill="#9FAF1F" opacity=".30"/>
-          <circle cx="200" cy="200" r="40"  fill="#4BA046"/>
-          <g class="ring" stroke="#32672F" stroke-opacity=".25">
-            <circle cx="200" cy="200" r="190"/><circle cx="200" cy="200" r="152"/>
-            <circle cx="200" cy="200" r="114"/><circle cx="200" cy="200" r="76"/>
-          </g>
-          <g fill="#2B2B2B" text-anchor="middle">
-            <text x="200" y="205" font-size="15" fill="#FFFFFF">Field</text>
-            <text x="200" y="146" font-size="14">Farm</text>
-            <text x="200" y="108" font-size="14">Landscape</text>
-            <text x="200" y="70"  font-size="14">Region</text>
-            <text x="200" y="32"  font-size="14" fill="#00467D">Market</text>
-          </g>
-          <g fill="#00467D">
-            <circle cx="268" cy="232" r="4"/><circle cx="118" cy="272" r="4"/><circle cx="300" cy="120" r="4"/>
-            <circle cx="96" cy="150" r="3"/><circle cx="330" cy="268" r="3"/>
-          </g>
-          <path d="M268 232 L 300 120 M268 232 L118 272 M118 272 L96 150" stroke="#00467D" stroke-width="1.4" stroke-dasharray="2 6" fill="none" stroke-linecap="round"/>
-        </svg>
-      </div>
-    </div>
+    <ol class="msm-stairs" aria-label="Scales modelled by MSM, from field to market">
+        <li class="msm-step msm-step--field">
+          <picture class="msm-step-icon">
+            <source srcset="assets/scales/scale-field.avif" type="image/avif">
+            <img src="assets/scales/scale-field.webp" width="720" height="720" alt="" decoding="async">
+          </picture>
+          <span class="msm-step-name">Field</span>
+        </li>
+        <li class="msm-step msm-step--farm">
+          <picture class="msm-step-icon">
+            <source srcset="assets/scales/scale-farm.avif" type="image/avif">
+            <img src="assets/scales/scale-farm.webp" width="720" height="720" alt="" decoding="async">
+          </picture>
+          <span class="msm-step-name">Farm</span>
+        </li>
+        <li class="msm-step msm-step--landscape">
+          <picture class="msm-step-icon">
+            <source srcset="assets/scales/scale-landscape.avif" type="image/avif">
+            <img src="assets/scales/scale-landscape.webp" width="720" height="720" alt="" decoding="async">
+          </picture>
+          <span class="msm-step-name">Landscape</span>
+        </li>
+        <li class="msm-step msm-step--region">
+          <picture class="msm-step-icon">
+            <source srcset="assets/scales/scale-region.avif" type="image/avif">
+            <img src="assets/scales/scale-region.webp" width="720" height="720" alt="" decoding="async">
+          </picture>
+          <span class="msm-step-name">Region</span>
+        </li>
+        <li class="msm-step msm-step--market">
+          <picture class="msm-step-icon">
+            <source srcset="assets/scales/scale-market.avif" type="image/avif">
+            <img src="assets/scales/scale-market.webp" width="720" height="720" alt="" decoding="async">
+          </picture>
+          <span class="msm-step-name">Market</span>
+        </li>
+    </ol>
     <svg class="bb-squiggle" viewBox="0 0 240 130" width="240" height="130" fill="none" aria-hidden="true">
       <path d="M6 96 C 40 120, 70 60, 110 70 S 180 110, 224 40" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="2 11"/>
       <path d="M224 40 l -14 2 m 14 -2 l -4 -13" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>

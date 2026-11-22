@@ -676,6 +676,18 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .navbar .nav-link .cv-btn i, .navbar .nav-link .cv-btn svg { color: #fff !important; font-size: .78em; margin-left: 4px; }
 .navbar-title .brand-2 { font-weight: 700; }
 
+/* ---------- navbar logo (replaces the text wordmark) ---------- */
+.navbar-brand { padding-top: 0; padding-bottom: 0; }
+.navbar-brand .navbar-logo,
+.navbar-brand img.navbar-logo {
+  height: 40px; width: auto; max-height: none; margin: 0;
+  border-radius: 4px !important; transition: transform .25s ease;
+}
+.navbar-brand:hover .navbar-logo { transform: scale(1.04); }
+@media (max-width: 575.98px) {
+  .navbar-brand .navbar-logo, .navbar-brand img.navbar-logo { height: 34px; }
+}
+
 /* ---------- hero (group variant) ---------- */
 .bb-name { font-size: clamp(3rem, 7.4vw, 6.2rem); }
 .bb-role a { color: var(--bb-primary) !important; border-bottom: 2px solid color-mix(in srgb, var(--bb-primary) 30%, transparent); }
@@ -692,11 +704,61 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .msm-btn.ghost, #quarto-document-content a.msm-btn.ghost { background: transparent; color: var(--bb-primary); border-color: color-mix(in srgb, var(--bb-primary) 40%, transparent); }
 .msm-btn.ghost:hover, #quarto-document-content a.msm-btn.ghost:hover { background: var(--bb-primary); color: #fff; border-color: var(--bb-primary); }
 
-/* scales diagram replaces the portrait inside the ring */
-.bb-portrait.msm-scales { background: var(--bb-surface); display: grid; place-items: center; }
-.msm-scales svg { width: 100%; height: 100%; display: block; }
-.msm-scales .ring { fill: none; stroke-width: 1.2; }
-.msm-scales text { font-family: var(--bb-font-sans); font-weight: 700; letter-spacing: .02em; }
+/* ---------- hero: five-scale staircase animation (Field → Market) ----------
+   CSS rebuild of the supplied GIF with the 720 px icons. Positions/sizes are
+   measured from the GIF (% of a 1098×617 stage); --x/--y = icon centre,
+   --s = icon square size, --lx/--ly = label centre. 8 s loop: one icon every
+   1 s, each fades in over .5 s, its label follows; all hold, then fade out. */
+.msm-stairs {
+  position: relative; width: clamp(340px, 48vw, 700px); aspect-ratio: 1098 / 617;
+  margin: 0; padding: 0; list-style: none; container-type: inline-size;
+  --k: 1.15;                                /* icon enlargement around each centre */
+}
+.msm-step {
+  position: absolute; inset: 0; margin: 0; pointer-events: none;
+  animation: 8s linear infinite both;      /* name set per step */
+}
+.msm-step-icon {
+  --sk: calc(var(--s) * var(--k));
+  position: absolute; width: var(--sk); aspect-ratio: 1;
+  left: calc(var(--x) - var(--sk) / 2); top: calc(var(--y) - var(--sk) * 1098 / 617 / 2);
+}
+.msm-step-icon img { display: block; width: 100%; height: 100%; margin: 0; border-radius: 0 !important; }
+.msm-step-name {
+  position: absolute; transform: translate(-50%, -50%);
+  left: calc(var(--x) + (var(--lx) - var(--x)) * var(--k));
+  top:  calc(var(--y) + (var(--ly) - var(--y)) * var(--k));
+  font-family: var(--bb-font-sans); font-weight: 700; font-size: max(.72rem, 2.05cqw);
+  letter-spacing: 0; font-kerning: normal; white-space: nowrap; color: var(--bb-ink-faint);
+  animation: 8s linear infinite both;
+}
+.msm-step--field { --x: 8.47%; --y: 84.52%; --s: 11.19%; --lx: 8.65%; --ly: 70.34%; animation-name: msm-in-0; }
+.msm-step--field .msm-step-name { animation-name: msm-lbl-0; }
+.msm-step--farm { --x: 23.63%; --y: 67.75%; --s: 14.18%; --lx: 23.63%; --ly: 84.12%; animation-name: msm-in-1; }
+.msm-step--farm .msm-step-name { animation-name: msm-lbl-1; }
+.msm-step--landscape { --x: 41.35%; --y: 51.46%; --s: 17.55%; --lx: 41.44%; --ly: 33.47%; animation-name: msm-in-2; }
+.msm-step--landscape .msm-step-name { animation-name: msm-lbl-2; }
+.msm-step--region { --x: 62.61%; --y: 38.25%; --s: 19.19%; --lx: 62.66%; --ly: 59.24%; animation-name: msm-in-3; }
+.msm-step--region .msm-step-name { animation-name: msm-lbl-3; }
+.msm-step--market { --x: 86.66%; --y: 26.82%; --s: 21.89%; --lx: 86.75%; --ly: 5.27%; animation-name: msm-in-4; }
+.msm-step--market .msm-step-name { animation-name: msm-lbl-4; }
+@keyframes msm-in-0  { 0%, 0.00% { opacity: 0; animation-timing-function: cubic-bezier(.25,.6,.35,1); } 6.25%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes msm-lbl-0 { 0%, 1.88% { opacity: 0; animation-timing-function: ease-out; } 4.38%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes msm-in-1  { 0%, 12.50% { opacity: 0; animation-timing-function: cubic-bezier(.25,.6,.35,1); } 18.75%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes msm-lbl-1 { 0%, 14.37% { opacity: 0; animation-timing-function: ease-out; } 16.88%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes msm-in-2  { 0%, 25.00% { opacity: 0; animation-timing-function: cubic-bezier(.25,.6,.35,1); } 31.25%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes msm-lbl-2 { 0%, 26.88% { opacity: 0; animation-timing-function: ease-out; } 29.38%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes msm-in-3  { 0%, 37.50% { opacity: 0; animation-timing-function: cubic-bezier(.25,.6,.35,1); } 43.75%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes msm-lbl-3 { 0%, 39.38% { opacity: 0; animation-timing-function: ease-out; } 41.88%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes msm-in-4  { 0%, 50.00% { opacity: 0; animation-timing-function: cubic-bezier(.25,.6,.35,1); } 56.25%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes msm-lbl-4 { 0%, 51.88% { opacity: 0; animation-timing-function: ease-out; } 54.37%, 95% { opacity: 1; } 100% { opacity: 0; } }
+.bb-hero-right:has(.msm-stairs) { min-height: 0; }
+.bb-hero-right:has(.msm-stairs) .bb-squiggle { display: none; }
+@media (max-width: 1080px) { .msm-stairs { width: min(96vw, 680px); } }
+@media (prefers-reduced-motion: reduce) {
+  .msm-step, .msm-step-name { animation: none; opacity: 1; }
+}
+
 @media (max-width: 1080px) { .bb-portrait-wrap { width: min(78vw, 420px); } }
 
 /* ---------- inner page header ---------- */

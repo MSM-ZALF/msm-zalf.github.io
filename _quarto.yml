@@ -13,7 +13,7 @@ website:
   title: "Multi-Scale Modelling (MSM) · ZALF"   # used in <title> and search results
   site-url: "https://msm-zalf.github.io/"        # <- change to your GitHub Pages URL
   description: "Multi-Scale Modelling (MSM) working group at the Leibniz Centre for Agricultural Landscape Research (ZALF): hybrid, cross-scale modelling of farm and cropping systems."
-  favicon: assets/favicon.svg
+  favicon: assets/favicon.png
   page-navigation: false
   search:
     location: navbar
@@ -26,7 +26,9 @@ website:
     card-style: summary_large_image
     image: assets/og-image.png
   navbar:
-    title: "MSM <span class='brand-2'>· ZALF</span>"   # styled wordmark (navbar only)
+    title: false                       # logo replaces the "MSM · ZALF" wordmark
+    logo: assets/msm-logo.webp
+    logo-alt: "Multi-Scale Modelling (MSM) · ZALF — home"
     toggle-position: right
     right:
       - text: "Home"
