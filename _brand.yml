@@ -3,9 +3,10 @@
 # theme variables (colours, fonts, links). Component styling lives in theme.scss.
 # Docs: https://quarto.org/docs/authoring/brand.html
 #
-# The palette is the earthy "agricultural landscape" palette of the reference
-# framework. Text colours were darkened slightly so that body text, links and
-# meta text meet WCAG AA contrast (≥ 4.5:1) on the cream backgrounds.
+# ZALF institutional palette (taken from zalf.de stylesheets): white background,
+# light-grey panels, ZALF greens and ZALF blue. Palette keys keep the framework's
+# names (cream = page background, forest = primary green, burnt = accent …).
+# Text colours meet WCAG AA contrast (≥ 4.5:1) on white and #F7F7F7.
 # To align with an updated ZALF corporate design, change the values here AND
 # the mirrored Sass/CSS variables at the top of theme.scss.
 
@@ -15,21 +16,21 @@ meta:
 
 color:
   palette:
-    cream:       "#F4EEE2"   # page background
-    cream-2:     "#EFE7D7"   # alternating section background
-    surface:     "#FBF7EE"   # cards / raised surfaces
-    ink:         "#2B2620"   # primary text (warm near-black)
-    ink-soft:    "#6B6253"   # secondary text
-    ink-faint:   "#6F6858"   # meta / muted text (AA on cream)
-    forest:      "#36513C"   # primary green
-    forest-deep: "#233827"   # darkest green (footer, deep accents)
-    olive:       "#6E7350"
-    sage:        "#97A083"
-    burnt:       "#BC5C32"   # burnt-orange accent (decorative)
-    burnt-text:  "#A84F26"   # accent used for text/links (AA on cream)
-    burnt-deep:  "#8E3F1E"
-    tan:         "#DAC6A0"
-    sand:        "#E8DCC4"
+    cream:       "#FFFFFF"   # page background
+    cream-2:     "#F7F7F7"   # alternating section background
+    surface:     "#FFFFFF"   # cards / raised surfaces
+    ink:         "#2B2B2B"   # primary text
+    ink-soft:    "#4B4B4B"   # secondary text
+    ink-faint:   "#666666"   # meta / muted text (AA on white)
+    forest:      "#32672F"   # ZALF dark green — primary (buttons, headings)
+    forest-deep: "#1E3F1C"   # deepest green (footer, bands)
+    olive:       "#637515"   # ZALF olive
+    sage:        "#9FAF1F"   # ZALF lime (decorative)
+    burnt:       "#4BA046"   # ZALF green — decorative accent (rings, underlines)
+    burnt-text:  "#00467D"   # ZALF blue — links and accent text
+    burnt-deep:  "#00365F"   # link hover
+    tan:         "#CFE3A8"   # light green on dark footer
+    sand:        "#EFEFEF"   # light grey
 
   foreground: ink
   background: cream
@@ -40,9 +41,9 @@ color:
 typography:
   # Satoshi is not on Google Fonts — it is loaded via header.html (Fontshare CDN).
   base:
-    family: Spectral          # readable serif for body / long-form text
+    family: "Open Sans"       # ZALF corporate body font
     line-height: 1.65
-    size: 1.05rem
+    size: 1rem
   headings:
     family: Satoshi           # geometric sans for headings + UI
     weight: 700

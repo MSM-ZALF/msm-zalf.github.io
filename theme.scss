@@ -1,6 +1,8 @@
 /*============================================================
   theme.scss — Multi-Scale Modelling (MSM) working group · ZALF
-  Warm · earthy · organic.  Satoshi (headings/UI) + Spectral (body).
+  ZALF institutional theme: white background, ZALF greens (#32672F, #4BA046),
+  ZALF blue (#00467D) for links and accents, Satoshi (headings/UI) + Open Sans (body).
+  Variable names (cream, forest, burnt …) are kept from the framework; only values changed.
   Works on top of Quarto's Bootstrap theme + _brand.yml.
   Based on the blenback.github.io framework; group-specific
   components are appended in the "MSM COMPONENTS" section below.
@@ -9,25 +11,25 @@
 /*-- scss:defaults --*/
 
 // ---- Palette (mirrors _brand.yml so rules below can use Sass vars) ----
-$cream:       #F4EEE2;
-$cream-2:     #EFE7D7;
-$surface:     #FBF7EE;
-$ink:         #2B2620;
-$ink-soft:    #6B6253;
-$ink-faint:   #6F6858;
-$forest:      #36513C;
-$forest-deep: #233827;
-$olive:       #6E7350;
-$sage:        #97A083;
-$burnt:       #BC5C32;
-$burnt-text:  #A84F26;
-$burnt-deep:  #8E3F1E;
-$tan:         #DAC6A0;
-$sand:        #E8DCC4;
+$cream:       #FFFFFF;
+$cream-2:     #F7F7F7;
+$surface:     #FFFFFF;
+$ink:         #2B2B2B;
+$ink-soft:    #4B4B4B;
+$ink-faint:   #666666;
+$forest:      #32672F;
+$forest-deep: #1E3F1C;
+$olive:       #637515;
+$sage:        #9FAF1F;
+$burnt:       #4BA046;
+$burnt-text:  #00467D;
+$burnt-deep:  #00365F;
+$tan:         #CFE3A8;
+$sand:        #EFEFEF;
 
 // ---- Fonts (files loaded in header.html) ----
 $font-family-sans-serif: "Satoshi", system-ui, -apple-system, sans-serif;
-$font-family-serif:      "Spectral", Georgia, "Times New Roman", serif;
+$font-family-serif:      "Open Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
 $font-family-base:       $font-family-serif;     // readable serif body / long-form
 $headings-font-family:   $font-family-sans-serif;
 $font-family-monospace:  "JetBrains Mono", "Source Code Pro", monospace;
@@ -70,29 +72,29 @@ $navbar-light-active-color: $forest;
    Design tokens (CSS custom properties — easy to retune)
    ---------------------------------------------------------- */
 :root {
-  --bb-cream:       #F4EEE2;
-  --bb-cream-2:     #EFE7D7;
-  --bb-surface:     #FBF7EE;
-  --bb-ink:         #2B2620;
-  --bb-ink-soft:    #6B6253;
-  --bb-ink-faint:   #6F6858;
-  --bb-forest:      #36513C;
-  --bb-forest-deep: #233827;
-  --bb-olive:       #6E7350;
-  --bb-sage:        #97A083;
-  --bb-burnt:       #BC5C32;
-  --bb-burnt-text:  #A84F26;
-  --bb-burnt-deep:  #8E3F1E;
-  --bb-tan:         #DAC6A0;
-  --bb-sand:        #E8DCC4;
+  --bb-cream:       #FFFFFF;
+  --bb-cream-2:     #F7F7F7;
+  --bb-surface:     #FFFFFF;
+  --bb-ink:         #2B2B2B;
+  --bb-ink-soft:    #4B4B4B;
+  --bb-ink-faint:   #666666;
+  --bb-forest:      #32672F;
+  --bb-forest-deep: #1E3F1C;
+  --bb-olive:       #637515;
+  --bb-sage:        #9FAF1F;
+  --bb-burnt:       #4BA046;
+  --bb-burnt-text:  #00467D;
+  --bb-burnt-deep:  #00365F;
+  --bb-tan:         #CFE3A8;
+  --bb-sand:        #EFEFEF;
 
   --bb-primary:      var(--bb-forest);
   --bb-primary-deep: var(--bb-forest-deep);
   --bb-accent:       var(--bb-burnt);
   --bb-accent-text:  var(--bb-burnt-text);
 
-  --bb-line:   rgba(43,38,32,.12);
-  --bb-line-2: rgba(43,38,32,.07);
+  --bb-line:   rgba(0,0,0,.12);
+  --bb-line-2: rgba(0,0,0,.07);
 
   /* duotone wash (MEDIUM) */
   --bb-duo-shadow: var(--bb-forest-deep);
@@ -103,11 +105,11 @@ $navbar-light-active-color: $forest;
 
   --bb-radius: 18px;
   --bb-radius-pill: 999px;
-  --bb-shadow-card: 0 1px 2px rgba(43,38,32,.04), 0 18px 40px -22px rgba(43,38,32,.30);
-  --bb-shadow-soft: 0 10px 30px -18px rgba(43,38,32,.35);
+  --bb-shadow-card: 0 1px 2px rgba(0,0,0,.04), 0 18px 40px -22px rgba(0,0,0,.30);
+  --bb-shadow-soft: 0 10px 30px -18px rgba(0,0,0,.35);
 
   --bb-font-sans: "Satoshi", system-ui, sans-serif;
-  --bb-font-serif: "Spectral", Georgia, serif;
+  --bb-font-serif: "Open Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 body {
@@ -116,12 +118,6 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* subtle paper grain over the whole page */
-body::before {
-  content: "";
-  position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: .5;
-  background-image: url("assets/grain.svg");
-}
 #quarto-content, .navbar, footer { position: relative; z-index: 1; }
 
 h1,h2,h3,h4,h5 { font-family: var(--bb-font-sans); letter-spacing: -.02em; }
@@ -194,8 +190,7 @@ body.quarto-light .page-columns { padding-top: 0; }
 .bb-hero {
   position: relative;
   max-width: 1480px; margin: 0 auto;
-  padding: 84px clamp(20px, 3vw, 44px) 80px;
-  min-height: 100vh;
+  padding: 24px clamp(20px, 3vw, 44px) 56px;   /* main already clears the fixed navbar */
   display: flex; justify-content: center; align-items: center;
   gap: clamp(36px, 5vw, 96px);
 }
@@ -262,7 +257,7 @@ body.quarto-light .page-columns { padding-top: 0; }
 }
 
 @media (max-width: 1080px) {
-  .bb-hero { flex-direction: column; min-height: auto; gap: 28px; padding-top: 84px; }
+  .bb-hero { flex-direction: column; gap: 28px; padding-top: 16px; }
   .bb-hero-left { flex: 1 1 auto; }
   .bb-hero-right { order: -1; min-height: 360px; }
   .bb-squiggle { display: none; }
@@ -322,7 +317,7 @@ h2[id] { scroll-margin-top: 110px; }
 }
 .pub-list .pub:last-child { border-bottom: 1px solid var(--bb-line); }
 .pub:hover { background: var(--bb-surface); padding-left: 18px; padding-right: 18px; }
-.pub .yr { font-family: var(--bb-font-sans); font-size: 1.5rem; font-weight: 700; color: var(--bb-accent); letter-spacing: -.02em; }
+.pub .yr { font-family: var(--bb-font-sans); font-size: 1.5rem; font-weight: 700; color: var(--bb-accent-text); letter-spacing: -.02em; }
 .pub .meta { min-width: 0; }
 .pub .pt { font-family: var(--bb-font-sans); font-size: 1.16rem; font-weight: 600; line-height: 1.32; letter-spacing: -.01em; color: var(--bb-ink); text-wrap: pretty; }
 .pub:hover .pt { color: var(--bb-primary); }
@@ -382,7 +377,7 @@ h2[id] { scroll-margin-top: 110px; }
 .year-heading {
   font-family: var(--bb-font-sans) !important;
   font-size: 1.6rem !important; font-weight: 700 !important;
-  color: var(--bb-accent) !important; letter-spacing: -.02em;
+  color: var(--bb-accent-text) !important; letter-spacing: -.02em;
   margin-top: 2.4rem !important; margin-bottom: .25rem !important;
 }
 ul.no-bullets > li {
@@ -571,7 +566,7 @@ ul.no-bullets > li i { color: var(--bb-ink-soft); }
   background: var(--bb-forest-deep);
   color: color-mix(in srgb, #fff 82%, var(--bb-forest));
   font-family: var(--bb-font-sans);
-  padding: 70px 0 36px; margin-top: 60px;
+  padding: 104px 0 36px; margin-top: 60px;
   position: relative; z-index: 1;
   /* Viewport bleed: overrides any grid-container constraint on article pages.
      On full-width pages 100% == 100vw so margin-left == 0; on narrower containers
@@ -759,7 +754,7 @@ a.msm-card:hover { transform: translateY(-3px); border-color: color-mix(in srgb,
   padding: 34px 0; border-top: 1px solid var(--bb-line);
 }
 .msm-theme:last-of-type { border-bottom: 1px solid var(--bb-line); }
-.msm-theme .num { font-family: var(--bb-font-sans); font-size: 2rem; font-weight: 900; color: var(--bb-accent); letter-spacing: -.03em; line-height: 1; }
+.msm-theme .num { font-family: var(--bb-font-sans); font-size: 2rem; font-weight: 900; color: var(--bb-accent-text); letter-spacing: -.03em; line-height: 1; }
 .msm-theme h3, #quarto-document-content .msm-theme h3 { margin: 0 0 10px; font-size: 1.5rem; color: var(--bb-ink); scroll-margin-top: 110px; }
 .msm-theme p { max-width: 70ch; }
 .msm-refs { list-style: none; padding: 0; margin: 14px 0 0; display: flex; flex-direction: column; gap: 8px; }
@@ -954,7 +949,7 @@ table.proj-table td.when { white-space: nowrap; color: var(--bb-ink-soft); }
 .talk-list { list-style: none; padding: 0; margin: 0; }
 .talk-list li { display: grid; grid-template-columns: 92px 1fr; gap: 28px; padding: 16px 8px; border-top: 1px solid var(--bb-line); align-items: baseline; }
 .talk-list li:last-child { border-bottom: 1px solid var(--bb-line); }
-.talk-list .yr { font-family: var(--bb-font-sans); font-weight: 700; font-size: 1.2rem; color: var(--bb-accent); }
+.talk-list .yr { font-family: var(--bb-font-sans); font-weight: 700; font-size: 1.2rem; color: var(--bb-accent-text); }
 .talk-list .tt { font-family: var(--bb-font-sans); font-weight: 600; color: var(--bb-ink); }
 .talk-list .ev { font-family: var(--bb-font-serif); font-style: italic; color: var(--bb-ink-soft); }
 .talk-list .kind { font-family: var(--bb-font-sans); font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--bb-primary); margin-left: 8px; }
@@ -980,3 +975,6 @@ table.proj-table > caption { position: absolute; width: 1px; height: 1px; overfl
 /* tighter rhythm between an inner-page header and its first section */
 .msm-page-head + .page-section, .msm-page-head + * + .page-section { padding-top: 2.5rem; margin-top: 1rem; border-top: 0; }
 .msm-cards.cols-3 { grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); }
+
+/* footer: Quarto's own footer rules are more specific and reset the padding */
+footer.bb-footer, .quarto-container footer.bb-footer { padding: 88px 0 36px !important; }
