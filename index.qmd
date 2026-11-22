@@ -17,8 +17,12 @@ listing:
     contents: publications/journal-articles.yml
     sort: false
     max-items: 4
-  - id: News
-    contents: news/*.qmd
+  - id: Tools
+    template: ejs/tools_home.ejs
+    contents: tools/tools.yml
+    sort: false
+  - id: Posts
+    contents: posts/*.qmd
     sort: "date desc"
     type: grid
     grid-columns: 3
@@ -126,12 +130,26 @@ listing:
 
 ```{=html}
 <div class="section-head">
-  <h2 id="news">News</h2>
-  <a class="section-more" href="news.html">All news</a>
+  <h2 id="tools">Tools</h2>
+  <a class="section-more" href="tools.html">All tools</a>
 </div>
 ```
 
-::: {#News}
+::: {#Tools}
+:::
+
+::::
+
+:::: {.page-section .section-tint}
+
+```{=html}
+<div class="section-head">
+  <h2 id="posts">Posts</h2>
+  <a class="section-more" href="posts.html">All posts</a>
+</div>
+```
+
+::: {#Posts}
 :::
 
 ::::

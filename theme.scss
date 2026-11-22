@@ -945,7 +945,7 @@ table.proj-table td.when { white-space: nowrap; color: var(--bb-ink-soft); }
 .msm-band .msm-btn:hover, #quarto-document-content .msm-band a.msm-btn:hover { background: #fff; border-color: #fff; color: var(--bb-forest-deep); }
 @media (max-width: 760px) { .msm-band { grid-template-columns: 1fr; } }
 
-/* ---------- talks list (news page) ---------- */
+/* ---------- talks list (posts page) ---------- */
 .talk-list { list-style: none; padding: 0; margin: 0; }
 .talk-list li { display: grid; grid-template-columns: 92px 1fr; gap: 28px; padding: 16px 8px; border-top: 1px solid var(--bb-line); align-items: baseline; }
 .talk-list li:last-child { border-bottom: 1px solid var(--bb-line); }
@@ -961,7 +961,7 @@ table.proj-table td.when { white-space: nowrap; color: var(--bb-ink-soft); }
 .msm-address strong { font-family: var(--bb-font-sans); }
 @media (max-width: 860px) { .msm-contact-grid { grid-template-columns: 1fr; } }
 
-/* ---------- news article pages ---------- */
+/* ---------- post pages ---------- */
 .quarto-title-block .quarto-title .title { font-family: var(--bb-font-sans); letter-spacing: -.03em; font-size: clamp(2rem, 4.6vw, 3.2rem); }
 .quarto-title-meta-heading { font-family: var(--bb-font-sans); color: var(--bb-ink-faint) !important; }
 .msm-back { display: inline-block; margin-top: 2rem; font-family: var(--bb-font-sans); font-weight: 600; }
@@ -978,3 +978,46 @@ table.proj-table > caption { position: absolute; width: 1px; height: 1px; overfl
 
 /* footer: Quarto's own footer rules are more specific and reset the padding */
 footer.bb-footer, .quarto-container footer.bb-footer { padding: 88px 0 36px !important; }
+
+/* ---------- publication rows: grey background on hover ---------- */
+.pub:hover { background: var(--bb-sand) !important; border-radius: 12px; }
+.pub:hover + .pub { border-top-color: transparent; }
+
+/* ---------- equal-height cards (research focus, tools, …) ---------- */
+.msm-cards > li { display: flex; min-width: 0; }
+.msm-cards > li > .msm-card { flex: 1 1 auto; width: 100%; }
+.msm-card .more { margin-top: auto; }
+
+/* research focus cards with illustration */
+.msm-card.has-img { padding: 0; overflow: hidden; gap: 0; }
+.msm-card .card-img { display: block; aspect-ratio: 16 / 9; overflow: hidden; background: var(--bb-cream-2); border-bottom: 1px solid var(--bb-line); }
+.msm-card .card-img img { width: 100%; height: 100%; object-fit: cover; margin: 0; border-radius: 0; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+a.msm-card.has-img:hover .card-img img { transform: scale(1.04); }
+.msm-card .card-body-msm { display: flex; flex-direction: column; gap: 10px; flex: 1 1 auto; padding: 18px 24px 22px; }
+.focus-cards .ico { margin-top: -42px; border: 3px solid var(--bb-surface); background: #E6F0E4; position: relative; }
+
+/* ---------- tools ---------- */
+.tool-group + .tool-group { margin-top: 3.5rem; }
+.tool-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr)); gap: 24px; }
+.tool {
+  display: flex; flex-direction: column; gap: 12px; scroll-margin-top: 110px;
+  background: var(--bb-surface); border: 1px solid var(--bb-line); border-radius: var(--bb-radius);
+  padding: 24px; box-shadow: var(--bb-shadow-card);
+}
+.tool-head { display: flex; gap: 16px; align-items: center; }
+.tool-logo {
+  flex: 0 0 auto; width: 72px; height: 72px; border-radius: 16px; display: grid; place-items: center; overflow: hidden;
+  background: var(--bb-cream-2); border: 1px solid var(--bb-line); color: var(--bb-primary); font-size: 1.8rem;
+}
+.tool-logo img { width: 84%; height: 84%; object-fit: contain; margin: 0; border-radius: 0; }
+.tool-logo.sm { width: 56px; height: 56px; font-size: 1.4rem; border-radius: 14px; }
+.tool-name, #quarto-document-content .tool-name { margin: 0; font-size: 1.4rem; color: var(--bb-ink); letter-spacing: -.02em; }
+.tool-tag { margin: 4px 0 0; font-family: var(--bb-font-sans); font-size: .92rem; color: var(--bb-ink-soft); line-height: 1.35; }
+.tool-desc { margin: 0; font-size: .97rem; line-height: 1.6; color: var(--bb-ink-soft); }
+.tool-meta { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 0; font-family: var(--bb-font-sans); font-size: .85rem; color: var(--bb-ink-faint); }
+.tool-meta i { color: var(--bb-primary); margin-right: 4px; }
+.tool-install { margin: 0; background: var(--bb-cream-2); border: 1px solid var(--bb-line); border-radius: 10px; padding: 10px 14px; font-size: .88rem; }
+.tool-install code { background: transparent; color: var(--bb-ink); padding: 0; }
+.tool .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 4px; }
+.tool-card .tool-logo.sm { margin-bottom: 4px; }
+.focus-cards, .msm-cards.cols-3 { grid-auto-rows: 1fr; }   /* every card in the grid gets the same height */

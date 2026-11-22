@@ -1,0 +1,38 @@
+```{=html}
+<%
+  // Tools page — grouped cards. Data: tools/tools.yml
+  const GROUPS = ['Software from MSM', 'Modelling frameworks'];
+  const by = {}; items.forEach(t => { (by[t.group] = by[t.group] || []).push(t); });
+  const order = GROUPS.concat(Object.keys(by).filter(g => !GROUPS.includes(g)));
+  const slug = s => String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-');
+%>
+<% order.forEach(g => { if (!by[g]) return; %>
+<section class="tool-group" aria-labelledby="tg-<%= slug(g) %>">
+  <div class="section-head"><h2 id="<%= slug(g) %>"><%= g %></h2></div>
+  <div class="tool-grid">
+  <% by[g].forEach(t => { %>
+    <article class="tool" id="<%= slug(t.name) %>">
+      <div class="tool-head">
+        <div class="tool-logo"><% if (t.logo) { %><img src="<%- t.logo %>" alt="<%= t.name %> logo" loading="lazy"><% } else { %><i class="<%= t.icon || 'fa-solid fa-toolbox' %>" aria-hidden="true"></i><% } %></div>
+        <div>
+          <h3 class="tool-name"><%= t.name %></h3>
+          <p class="tool-tag"><%= t.tagline %></p>
+        </div>
+      </div>
+      <p class="tool-desc"><%= t.description %></p>
+      <% if (t.language || t.license) { %><p class="tool-meta"><% if (t.language) { %><span><i class="fa-solid fa-code" aria-hidden="true"></i> <%= t.language %></span><% } %><% if (t.license) { %><span><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i> <%= t.license %> licence</span><% } %></p><% } %>
+      <% if (t.install) { %><pre class="tool-install"><code><%= t.install %></code></pre><% } %>
+      <% if (t.tags) { %><div class="msm-tags"><% t.tags.forEach(x => { %><span class="msm-tag"><%= x %></span><% }) %></div><% } %>
+      <div class="links">
+        <% if (t.docs) { %><a class="tagpill" href="<%- t.docs %>">Documentation</a><% } %>
+        <% if (t.repo) { %><a class="tagpill" href="<%- t.repo %>"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a><% } %>
+        <% if (t.pypi) { %><a class="tagpill" href="<%- t.pypi %>">PyPI</a><% } %>
+        <% if (t.website) { %><a class="tagpill" href="<%- t.website %>">Website</a><% } %>
+        <% if (t.paper) { %><a class="tagpill" href="<%- t.paper %>">Paper</a><% } %>
+      </div>
+    </article>
+  <% }) %>
+  </div>
+</section>
+<% }) %>
+```

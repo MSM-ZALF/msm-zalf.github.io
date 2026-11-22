@@ -45,6 +45,7 @@ listing:
       <li><a href="https://www.simplace.net/">SIMPLACE</a> — Scientific Impact Assessment and Modelling Platform for Advanced Crop and Ecosystem Management</li>
       <li><a href="http://www.biomamodelling.org/">BioMA</a> — Biophysical Models Applications framework, from prototype to operational applications</li>
       <li><a href="https://marswiki.jrc.ec.europa.eu/agri4castwiki/index.php/Welcome_to_WikiMCYFS">MCYFS</a> — MARS Crop Yield Forecasting System for crop monitoring and yield forecasting</li>
+      <li>Our own open-source packages <a href="tools.html#geeagri">geeagri</a> and <a href="tools.html#torchcrop">torchcrop</a> — see <a href="tools.html">Tools</a></li>
     </ul>
   </div>
   <div class="msm-card">

@@ -1,0 +1,17 @@
+```{=html}
+<%
+  const slug = s => String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-');
+  const list = items.filter(t => t.home === true || t.home === 'true');
+%>
+<ul class="msm-cards cols-3">
+<% list.forEach(t => { %>
+  <li><a class="msm-card tool-card" href="tools.html#<%= slug(t.name) %>">
+    <span class="tool-logo sm"><% if (t.logo) { %><img src="<%- t.logo %>" alt="" loading="lazy"><% } else { %><i class="<%= t.icon || 'fa-solid fa-toolbox' %>" aria-hidden="true"></i><% } %></span>
+    <span class="msm-kicker"><%= t.group %></span>
+    <h3><%= t.name %></h3>
+    <p><%= t.tagline %></p>
+    <span class="more">Learn more</span>
+  </a></li>
+<% }) %>
+</ul>
+```

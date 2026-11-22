@@ -1,11 +1,14 @@
 ```{=html}
-<ul class="msm-cards cols-3">
+<ul class="msm-cards cols-3 focus-cards">
 <% items.forEach(t => { %>
-  <li><a class="msm-card" href="research.html#<%= t.id %>">
-    <span class="ico"><i class="<%= t.icon %>" aria-hidden="true"></i></span>
-    <h3><%= t.title %></h3>
-    <p><%= t.summary %></p>
-    <span class="more">Read more</span>
+  <li><a class="msm-card has-img" href="research.html#<%= t.id %>">
+    <% if (t.image) { %><span class="card-img"><img src="<%- t.image %>" alt="" loading="lazy"></span><% } %>
+    <span class="card-body-msm">
+      <span class="ico"><i class="<%= t.icon %>" aria-hidden="true"></i></span>
+      <h3><%= t.title %></h3>
+      <p><%= t.summary %></p>
+      <span class="more">Read more</span>
+    </span>
   </a></li>
 <% }) %>
 </ul>

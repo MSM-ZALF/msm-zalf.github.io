@@ -4,7 +4,7 @@ project:
   render:
     - "*.qmd"
     - "team/*.qmd"
-    - "news/*.qmd"
+    - "posts/*.qmd"
   resources:
     - robots.txt
     - assets/
@@ -41,8 +41,10 @@ website:
         href: projects.qmd
       - text: "Publications"
         href: publications.qmd
-      - text: "News"
-        href: news.qmd
+      - text: "Tools"
+        href: tools.qmd
+      - text: "Posts"
+        href: posts.qmd
       - text: "Jobs"
         href: jobs.qmd
       - text: "Contact"

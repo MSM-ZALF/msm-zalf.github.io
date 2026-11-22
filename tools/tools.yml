@@ -1,0 +1,82 @@
+# =====================================================================
+#  Tools  —  rendered by ejs/tools.ejs (tools page) and ejs/tools_home.ejs
+#
+#  group  — "Software from MSM" | "Modelling frameworks"
+#  logo   — image in assets/tools/ (optional; otherwise `icon` is shown)
+#  icon   — Font Awesome class, e.g. "fa-solid fa-seedling"
+#  install— one-line install command (optional)
+#  links  — any of: docs, repo, pypi, website, paper
+#  home   — true → shown on the home page
+#
+#  Sources: repositories of the MSM-ZALF GitHub organisation, and the
+#  modelling frameworks listed in the CV in documents/msm.
+# =====================================================================
+
+- name: "geeagri"
+  group: "Software from MSM"
+  tagline: "Agricultural analysis powered by Google Earth Engine"
+  description: "A Python package that integrates Google Earth Engine with domain-specific agricultural analysis: long-term satellite and climate time series for points and polygons, image-patch generation for deep learning, cloud-free gap-filled time series, harmonic regression, PCA, and phenology metrics (start, peak and end of season)."
+  logo: "assets/tools/geeagri.png"
+  language: "Python"
+  license: "MIT"
+  install: "pip install geeagri"
+  tags: ["Remote sensing", "Earth Engine", "Phenology", "Time series"]
+  docs: "https://geonextgis.github.io/geeagri"
+  repo: "https://github.com/MSM-ZALF/geeagri"
+  pypi: "https://pypi.org/project/geeagri/"
+  home: true
+
+- name: "torchcrop"
+  group: "Software from MSM"
+  tagline: "A PyTorch-native library for hybrid crop modelling"
+  description: "A fully differentiable re-implementation of the LINTUL-5 crop growth model. Every simulation step yields valid torch.autograd gradients, so mechanistic crop processes can be combined with learnable components (neural residuals, learned stress responses, parameter networks) and calibrated end-to-end. Batch-first for GPU simulation of many sites and years; 23 bundled crop presets."
+  logo: "assets/tools/torchcrop.png"
+  language: "Python · PyTorch"
+  license: "MIT"
+  install: "pip install torchcrop"
+  tags: ["Hybrid modelling", "Differentiable models", "Crop growth", "Calibration"]
+  docs: "https://geonextgis.github.io/torchcrop/"
+  repo: "https://github.com/MSM-ZALF/torchcrop"
+  pypi: "https://pypi.org/project/torchcrop/"
+  home: true
+
+- name: "SIMPLACE"
+  group: "Modelling frameworks"
+  tagline: "Scientific Impact Assessment and Modelling Platform for Advanced Crop and Ecosystem Management"
+  description: "A software platform for agro-ecological modelling and impact assessment, used by group members for crop and farm-system simulations from field to region."
+  icon: "fa-solid fa-seedling"
+  tags: ["Crop modelling", "Impact assessment"]
+  website: "https://www.simplace.net/"
+  paper: "https://doi.org/10.1093/insilicoplants/diad006"
+  home: true
+
+- name: "BioMA"
+  group: "Modelling frameworks"
+  tagline: "Biophysical Models Applications"
+  description: "A software framework for agro-ecological modelling that bridges the step from research prototypes to operational applications."
+  icon: "fa-solid fa-cubes"
+  tags: ["Modelling framework", "Agro-ecology"]
+  website: "http://www.biomamodelling.org/"
+
+- name: "MCYFS"
+  group: "Modelling frameworks"
+  tagline: "MARS Crop Yield Forecasting System"
+  description: "The European Commission's software framework for crop monitoring and yield forecasting, with which group members have worked on operational yield forecasting."
+  icon: "fa-solid fa-chart-line"
+  tags: ["Yield forecasting", "Crop monitoring"]
+  website: "https://marswiki.jrc.ec.europa.eu/agri4castwiki/index.php/Welcome_to_WikiMCYFS"
+
+# TEMPLATE
+# - name: "newtool"
+#   group: "Software from MSM"
+#   tagline: "One-line summary"
+#   description: "Two or three sentences."
+#   logo: "assets/tools/newtool.png"
+#   language: "Python"
+#   license: "MIT"
+#   install: "pip install newtool"
+#   tags: ["Tag 1", "Tag 2"]
+#   docs: "https://..."
+#   repo: "https://github.com/MSM-ZALF/newtool"
+#   pypi: ""
+#   home: false

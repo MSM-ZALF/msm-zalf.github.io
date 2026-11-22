@@ -3,12 +3,14 @@ title: "Amit Kumar Srivastava joins ZALF"
 description: "Tenure-track senior scientist in crop and farm-system modelling."
 date: "2024-05-01"
 categories: [Team]
-image: ../assets/news/team.svg
+image: ../assets/posts/team.svg
 image-alt: ""
+aliases:
+  - ../news/2024-05-01-srivastava-joins-zalf.html
 ---
 
 In May 2024, **Dr. Amit Kumar Srivastava** joined the Leibniz Centre for Agricultural Landscape Research (ZALF) as a Tenure-Track Senior Scientist. He previously worked for ten years as a Senior Scientist at the Institute of Crop Science and Resource Conservation, University of Bonn, and as a Scientific Project Officer at the European Commission's Joint Research Centre.
 
 [View profile](../team/srivastava.qmd)
 
-[← All news](../news.qmd){.msm-back}
+[← All posts](../posts.qmd){.msm-back}

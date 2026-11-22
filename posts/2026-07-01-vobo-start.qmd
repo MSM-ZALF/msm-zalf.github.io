@@ -3,10 +3,12 @@ title: "VOBO project starts"
 description: "New IAT Flex-Fund project at ZALF with MSM as work-package leader."
 date: "2026-07-01"
 categories: [Projects]
-image: ../assets/news/project.svg
+image: ../assets/posts/project.svg
 image-alt: ""
+aliases:
+  - ../news/2026-07-01-vobo-start.html
 ---
 
 The **VOBO** project, funded by the ZALF Flex-Fund of the Innovation Centre for Agricultural System Transformation (IAT), started in July 2026 and runs until June 2027. MSM leads a work package in the project.
 
-[← All news](../news.qmd){.msm-back}
+[← All posts](../posts.qmd){.msm-back}

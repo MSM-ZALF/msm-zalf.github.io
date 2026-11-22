@@ -1,10 +1,12 @@
 ---
-pagetitle: "News"
-description: "News, project launches, achievements, talks and events from the Multi-Scale Modelling (MSM) working group at ZALF."
+pagetitle: "Posts"
+aliases:
+  - news.html
+description: "Posts: project launches, team updates, achievements, talks and events from the Multi-Scale Modelling (MSM) working group at ZALF."
 page-layout: full
 listing:
-  - id: News
-    contents: news/*.qmd
+  - id: Posts
+    contents: posts/*.qmd
     sort: "date desc"
     type: grid
     grid-columns: 3
@@ -14,21 +16,21 @@ listing:
     feed: true
   - id: Talks
     template: ejs/talks.ejs
-    contents: news/talks.yml
+    contents: posts/talks.yml
     sort: false
 ---
 
 ```{=html}
 <header class="msm-page-head">
-  <div class="bb-eyebrow">News</div>
+  <div class="bb-eyebrow">Posts</div>
   <h1>Updates<br><span class="ln2">&amp; events.</span></h1>
-  <p class="msm-lede">Project launches, team news, achievements and announcements from the group. Subscribe via <a href="news.xml">RSS</a>.</p>
+  <p class="msm-lede">Project launches, team updates, achievements and announcements from the group. Subscribe via <a href="posts.xml">RSS</a>.</p>
 </header>
 ```
 
 :::: {.page-section}
 
-::: {#News}
+::: {#Posts}
 :::
 
 ::::

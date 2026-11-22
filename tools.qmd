@@ -1,0 +1,29 @@
+---
+pagetitle: "Tools"
+description: "Open-source software and modelling frameworks of the Multi-Scale Modelling (MSM) working group at ZALF: geeagri, torchcrop, SIMPLACE, BioMA and MCYFS."
+page-layout: full
+listing:
+  - id: Tools
+    template: ejs/tools.ejs
+    contents: tools/tools.yml
+    sort: false
+---
+
+```{=html}
+<header class="msm-page-head">
+  <div class="bb-eyebrow">Tools</div>
+  <h1>Software<br><span class="ln2">&amp; frameworks.</span></h1>
+  <p class="msm-lede">Open-source packages developed in the group and the modelling frameworks we work with — for Earth-observation analysis, hybrid crop modelling and cross-scale simulation.</p>
+</header>
+```
+
+:::: {.page-section}
+
+::: {#Tools}
+:::
+
+```{=html}
+<p class="msm-note">Our open-source code is published in the <a href="https://github.com/MSM-ZALF">MSM-ZALF GitHub organisation</a>. Issues, questions and contributions are welcome there.</p>
+```
+
+::::

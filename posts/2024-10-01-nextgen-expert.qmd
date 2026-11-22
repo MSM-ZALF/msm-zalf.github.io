@@ -3,10 +3,12 @@ title: "NextGen-Expert starts within FAIRagro"
 description: "DFG-funded FAIRagro project on tools for extreme events and plant-resilience assessment."
 date: "2024-10-01"
 categories: [Projects, DFG, FAIR data]
-image: ../assets/news/project.svg
+image: ../assets/posts/project.svg
 image-alt: ""
+aliases:
+  - ../news/2024-10-01-nextgen-expert.html
 ---
 
 **NextGen-Expert — Next-Generation Environmental and eXtended Tools for Extreme Events & Plant Resilience Assessment** started in October 2024 within [FAIRagro](https://fairagro.net/en/about-us/our-mission/), the community-driven initiative of the National Research Data Infrastructure (NFDI), funded by the Deutsche Forschungsgemeinschaft (DFG). The project runs until September 2026 and is coordinated by Dr. Amit Kumar Srivastava.
 
-[← All news](../news.qmd){.msm-back}
+[← All posts](../posts.qmd){.msm-back}
