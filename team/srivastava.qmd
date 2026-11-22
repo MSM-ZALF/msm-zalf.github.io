@@ -1,5 +1,5 @@
 ---
-pagetitle: "Dr. Amit Kumar Srivastava · MSM · ZALF"
+pagetitle: "Dr. Amit Kumar Srivastava"
 description: "Profile of Dr. Amit Kumar Srivastava, Tenure-Track Senior Scientist in the Multi-Scale Modelling working group at ZALF."
 page-layout: full
 image: ../assets/team/srivastava.jpg

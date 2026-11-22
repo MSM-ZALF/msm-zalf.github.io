@@ -1,5 +1,5 @@
 ---
-pagetitle: "Team · Multi-Scale Modelling (MSM) · ZALF"
+pagetitle: "Team"
 description: "People of the Multi-Scale Modelling (MSM) working group at ZALF — group lead, scientists, PhD students and student researchers."
 page-layout: full
 listing:

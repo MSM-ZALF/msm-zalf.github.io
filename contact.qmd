@@ -1,5 +1,5 @@
 ---
-pagetitle: "Contact · Multi-Scale Modelling (MSM) · ZALF"
+pagetitle: "Contact"
 description: "Contact the Multi-Scale Modelling (MSM) working group at ZALF, Eberswalder Straße 84, 15374 Müncheberg, Germany — address, contact persons and directions."
 page-layout: full
 listing:

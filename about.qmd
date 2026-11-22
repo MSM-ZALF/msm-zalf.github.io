@@ -1,5 +1,5 @@
 ---
-pagetitle: "About · Multi-Scale Modelling (MSM) · ZALF"
+pagetitle: "About"
 description: "About the Multi-Scale Modelling (MSM) working group: mission, objectives and institutional affiliation within Research Area 4 'Simulation and Data Science' at ZALF."
 page-layout: full
 ---

@@ -1,5 +1,5 @@
 ---
-pagetitle: "News · Multi-Scale Modelling (MSM) · ZALF"
+pagetitle: "News"
 description: "News, project launches, achievements, talks and events from the Multi-Scale Modelling (MSM) working group at ZALF."
 page-layout: full
 listing:

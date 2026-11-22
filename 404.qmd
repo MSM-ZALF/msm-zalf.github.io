@@ -1,5 +1,5 @@
 ---
-pagetitle: "Page not found · MSM · ZALF"
+pagetitle: "Page not found"
 page-layout: full
 ---
 

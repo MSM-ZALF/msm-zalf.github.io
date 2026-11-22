@@ -1,5 +1,5 @@
 ---
-pagetitle: "Publications · Multi-Scale Modelling (MSM) · ZALF"
+pagetitle: "Publications"
 description: "Peer-reviewed journal articles, books, reports and conference contributions by members of the Multi-Scale Modelling (MSM) working group at ZALF, with DOI links and filters."
 page-layout: full
 listing:

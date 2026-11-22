@@ -1,5 +1,5 @@
 ---
-pagetitle: "Projects · Multi-Scale Modelling (MSM) · ZALF"
+pagetitle: "Projects"
 description: "Ongoing and completed research projects, collaborations and third-party funding of the Multi-Scale Modelling (MSM) working group at ZALF."
 page-layout: full
 listing:

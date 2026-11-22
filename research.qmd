@@ -1,5 +1,5 @@
 ---
-pagetitle: "Research · Multi-Scale Modelling (MSM) · ZALF"
+pagetitle: "Research"
 description: "Research themes, methods and scientific contributions of the MSM working group at ZALF: cross-scale farm-system modelling, hybrid AI–process modelling, climate impacts, yield forecasting and model intercomparison."
 page-layout: full
 listing:

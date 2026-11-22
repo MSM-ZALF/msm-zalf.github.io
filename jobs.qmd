@@ -1,5 +1,5 @@
 ---
-pagetitle: "Jobs · Multi-Scale Modelling (MSM) · ZALF"
+pagetitle: "Jobs"
 description: "Vacancies, PhD and postdoctoral positions, theses, internships and student jobs in the Multi-Scale Modelling (MSM) working group at ZALF."
 page-layout: full
 listing:
