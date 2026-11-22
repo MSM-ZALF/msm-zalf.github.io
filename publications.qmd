@@ -1,0 +1,34 @@
+---
+pagetitle: "Publications · Multi-Scale Modelling (MSM) · ZALF"
+description: "Peer-reviewed journal articles, books, reports and conference contributions by members of the Multi-Scale Modelling (MSM) working group at ZALF, with DOI links and filters."
+page-layout: full
+listing:
+  - id: Publications
+    template: ejs/publication_filter.ejs
+    contents:
+      - publications/journal-articles.yml
+      - publications/books-reports.yml
+      - publications/conference-contributions.yml
+    sort: false
+---
+
+```{=html}
+<header class="msm-page-head">
+  <div class="bb-eyebrow">Publications</div>
+  <h1>Scientific<br><span class="ln2">output.</span></h1>
+  <p class="msm-lede">Journal articles, books, reports and conference contributions by group members. Search by keyword, author or journal, or filter by year and type. Names of group members are highlighted.</p>
+</header>
+```
+
+:::: {.page-section}
+
+::: {#Publications}
+:::
+
+```{=html}
+<p class="msm-note">Further sources: <a href="https://scholar.google.com/citations?hl=en&user=qRFKdHwAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a> ·
+<a href="https://orcid.org/0000-0001-8219-4854">ORCID</a> ·
+<a href="https://www.zalf.de/en/forschung_lehre/publikationen/Pages/default_ag.aspx?idxs=x90x">ZALF publication database (MSM)</a></p>
+```
+
+::::

@@ -1,0 +1,98 @@
+```{=html}
+<%
+  // Full publication list with client-side filtering (search · year · type).
+  // Data: publications/*.yml — each entry has a `type` (article | book | conference).
+  // Group members' names are highlighted (the regex needs ONE capture group so split() keeps the matches); extend MEMBER_NAMES when people join.
+  const MEMBER_NAMES = /(Srivastava, A\.(?:\s?K\.?)?|Ewert, F\.)/g;
+  const TYPE_LABEL = { article: 'Journal article', book: 'Book / chapter / report', conference: 'Conference contribution' };
+  const TYPE_ORDER = ['article', 'book', 'conference'];
+  let sorted = items.slice().sort((a, b) => {
+    let ya = String(a.year || ''); let yb = String(b.year || '');
+    let ra = ya.toLowerCase() === 'in review'; let rb = yb.toLowerCase() === 'in review';
+    if (ra && !rb) return -1; if (!ra && rb) return 1;
+    let na = parseInt(ya); let nb = parseInt(yb);
+    if (!isNaN(na) && !isNaN(nb) && na !== nb) return nb - na;
+    return TYPE_ORDER.indexOf(a.type) - TYPE_ORDER.indexOf(b.type);
+  });
+  const years = [...new Set(sorted.map(i => String(i.year || '')).filter(Boolean))];
+  const counts = {}; sorted.forEach(i => { counts[i.type] = (counts[i.type] || 0) + 1; });
+  const esc = s => String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  const plain = s => String(s || '').replace(/<[^>]+>/g, '');
+%>
+<form class="pub-filter" role="search" aria-label="Filter publications" onsubmit="return false">
+  <div class="q"><label for="pf-q">Search publications</label>
+    <input id="pf-q" type="search" placeholder="Search title, author, journal, keyword…" autocomplete="off"></div>
+  <div><label for="pf-year">Year</label>
+    <select id="pf-year"><option value="">All years</option>
+      <% years.forEach(y => { %><option value="<%= y %>"><%= y %></option><% }) %>
+    </select></div>
+  <div><label for="pf-type">Type</label>
+    <select id="pf-type"><option value="">All types</option>
+      <% TYPE_ORDER.forEach(t => { if (counts[t]) { %><option value="<%= t %>"><%= TYPE_LABEL[t] %> (<%= counts[t] %>)</option><% } }) %>
+    </select></div>
+  <button type="button" id="pf-reset">Reset</button>
+</form>
+<p class="pub-count" id="pf-count" aria-live="polite"><%= sorted.length %> publications</p>
+
+<div class="pub-list" id="pub-list">
+<% for (let i = 0; i < sorted.length; i++) { let item = sorted[i]; %>
+  <article class="pub" data-year="<%= item.year %>" data-type="<%= item.type %>"
+           data-text="<%= esc(plain([item.title, item.authors, item.journal, item.year, TYPE_LABEL[item.type]].join(' ')).toLowerCase()) %>">
+    <div class="yr"><%= item.year || '' %></div>
+    <div class="meta">
+      <div class="ptype"><%= TYPE_LABEL[item.type] || '' %></div>
+      <div class="pt"><%= item.title %></div>
+      <div class="pj">
+        <% if (item.journal) { %><i><%= item.journal %></i><% } %><% if (item.volume) { %>, <%= item.volume %><% } %><% if (item.authors) { %> · <% String(item.authors).split(MEMBER_NAMES).forEach((part, k) => { if (k % 2) { %><span class="author-name"><%= part %></span><% } else { %><%= part %><% } }) %><% } %>
+      </div>
+      <% if (item.doi || item.url || item.preprint_url || item.data_url || item.code_url || item.bibtex) { %>
+      <div class="links">
+        <% if (item.doi) { %><a class="tagpill" href="<%- item.doi %>" title="<%- item.doi %>">DOI</a><% } %>
+        <% if (item.url) { %><a class="tagpill" href="<%- item.url %>">Link</a><% } %>
+        <% if (item.preprint_url) { %><a class="tagpill" href="<%- item.preprint_url %>">Preprint</a><% } %>
+        <% if (item.data_url) { %><a class="tagpill" href="<%- item.data_url %>">Data</a><% } %>
+        <% if (item.code_url) { %><a class="tagpill" href="<%- item.code_url %>">Code</a><% } %>
+        <% if (item.bibtex) { %><a class="tagpill" href="<%- item.bibtex %>" download>Cite</a><% } %>
+      </div>
+      <% } %>
+    </div>
+  </article>
+<% } %>
+</div>
+<p class="pub-empty" id="pf-empty" hidden>No publications match your filters.</p>
+```
+
+<script>
+(function () {
+  function init() {
+    var q = document.getElementById('pf-q'), y = document.getElementById('pf-year'),
+        t = document.getElementById('pf-type'), r = document.getElementById('pf-reset'),
+        cnt = document.getElementById('pf-count'), empty = document.getElementById('pf-empty');
+    if (!q) return;
+    var rows = Array.prototype.slice.call(document.querySelectorAll('#pub-list .pub'));
+    // deep links: publications.html?q=machine+learning&type=article&year=2025
+    var p = new URLSearchParams(location.search);
+    if (p.get('q')) q.value = p.get('q');
+    if (p.get('year')) y.value = p.get('year');
+    if (p.get('type')) t.value = p.get('type');
+    function apply() {
+      var terms = q.value.toLowerCase().trim().split(/\s+/).filter(Boolean), n = 0;
+      rows.forEach(function (row) {
+        var ok = (!y.value || row.dataset.year === y.value) && (!t.value || row.dataset.type === t.value) &&
+                 terms.every(function (w) { return row.dataset.text.indexOf(w) !== -1; });
+        row.hidden = !ok; if (ok) n++;
+      });
+      cnt.textContent = (n === rows.length) ? rows.length + ' publications' : 'Showing ' + n + ' of ' + rows.length + ' publications';
+      empty.hidden = n !== 0;
+      var s = new URLSearchParams();
+      if (q.value) s.set('q', q.value); if (y.value) s.set('year', y.value); if (t.value) s.set('type', t.value);
+      history.replaceState(null, '', location.pathname + (s.toString() ? '?' + s : '') + location.hash);
+    }
+    var timer; q.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(apply, 120); });
+    y.addEventListener('change', apply); t.addEventListener('change', apply);
+    r.addEventListener('click', function () { q.value = ''; y.value = ''; t.value = ''; apply(); q.focus(); });
+    apply();
+  }
+  if (document.readyState !== 'loading') init(); else document.addEventListener('DOMContentLoaded', init);
+})();
+</script>

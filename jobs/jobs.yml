@@ -1,0 +1,42 @@
+# =====================================================================
+#  Job vacancies  —  rendered by ejs/jobs.ejs on jobs.qmd
+#
+#  Openings are sorted automatically:
+#    deadline today or later (or "open until filled") → "Open positions"
+#    deadline in the past                              → "Past opportunities"
+#  The check runs at build time AND again in the visitor's browser, so an
+#  advert moves to "Past opportunities" on its deadline without a rebuild.
+#  Keep expired adverts for a while for transparency, then delete them.
+#
+#  Fields
+#    title       position title
+#    type        "PhD" | "Postdoc" | "Scientist" | "Student assistant" | "Internship" | "Thesis (BSc/MSc)" | "Other"
+#    deadline    "YYYY-MM-DD"  or  "open"  (open until filled)
+#    posted      "YYYY-MM-DD"
+#    start       e.g. "01.04.2027" or "as soon as possible"
+#    duration    e.g. "3 years"
+#    hours       e.g. "65 %" or "full time"
+#    reference   ZALF reference number (Kennziffer)
+#    summary     1–3 sentences
+#    contact     name + email for questions
+#    url         link to the official advert (ZALF vacancies portal)
+#    pdf         optional link to the PDF advert
+#
+#  There are currently no MSM vacancies (checked against the ZALF vacancies
+#  portal on 22.11.2026). Add adverts below using the template.
+# =====================================================================
+
+[]
+
+# TEMPLATE — replace the [] above with a list like this:
+# - title: "PhD position: Hybrid crop modelling for yield forecasting"
+#   type: "PhD"
+#   deadline: "2027-01-31"
+#   posted: "2026-12-01"
+#   start: "01.04.2027"
+#   duration: "3 years"
+#   hours: "65 %"
+#   reference: "00-2026"
+#   summary: "Short description of the position."
+#   contact: "Dr. Amit Kumar Srivastava (AmitKumar.Srivastava@zalf.de)"
+#   url: "https://www.zalf.de/en/karriere/stellenangebote/Pages/default.aspx"

@@ -1,0 +1,71 @@
+```{=html}
+<%
+  // Jobs page — splits adverts into open vs. past by `deadline` ("YYYY-MM-DD" or "open").
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  const dl = j => (!j.deadline || String(j.deadline).toLowerCase() === 'open') ? null : new Date(j.deadline + 'T23:59:59');
+  const isOpen = j => dl(j) === null || dl(j) >= today;
+  const fmt = s => { const d = new Date(s + 'T12:00:00'); return isNaN(d) ? s : d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }); };
+  const jobs = (items || []).filter(j => j && j.title);
+  const open = jobs.filter(isOpen).sort((a, b) => (dl(a) || 8.64e15) - (dl(b) || 8.64e15));
+  const past = jobs.filter(j => !isOpen(j)).sort((a, b) => dl(b) - dl(a));
+  const card = (j, expired) => `
+  <article class="job${expired ? ' is-expired' : ''}" data-deadline="${j.deadline || 'open'}">
+    <div>
+      <span class="msm-kicker">${j.type || 'Position'}</span>
+      <h3>${j.title}</h3>
+      <div class="meta-row">
+        ${j.start ? `<span><i class="fa-solid fa-calendar-day" aria-hidden="true"></i>Start: ${j.start}</span>` : ''}
+        ${j.duration ? `<span><i class="fa-solid fa-hourglass-half" aria-hidden="true"></i>${j.duration}</span>` : ''}
+        ${j.hours ? `<span><i class="fa-solid fa-clock" aria-hidden="true"></i>${j.hours}</span>` : ''}
+        ${j.reference ? `<span><i class="fa-solid fa-hashtag" aria-hidden="true"></i>Ref. ${j.reference}</span>` : ''}
+      </div>
+      ${j.summary ? `<p>${j.summary}</p>` : ''}
+      ${j.contact ? `<p style="font-family:var(--bb-font-sans);font-size:.9rem">Questions: ${j.contact}</p>` : ''}
+    </div>
+    <div class="side">
+      <span class="status ${expired ? 'expired' : 'open'}">${expired ? 'Closed' : 'Open'}</span>
+      <div class="deadline"><small>Application deadline</small>${j.deadline && j.deadline !== 'open' ? fmt(j.deadline) : 'Open until filled'}</div>
+      ${j.url ? `<a class="msm-btn${expired ? ' ghost' : ''}" href="${j.url}">${expired ? 'View advert' : 'Apply / details'}</a>` : ''}
+      ${j.pdf ? `<a class="tagpill" href="${j.pdf}">PDF</a>` : ''}
+    </div>
+  </article>`;
+%>
+<div class="section-head"><h2 id="open-positions">Open positions</h2></div>
+<div class="job-list" id="jobs-open">
+  <% open.forEach(j => { %><%- card(j, false) %><% }) %>
+</div>
+<div class="job-empty" id="jobs-open-empty" <%- open.length ? 'hidden' : '' %>>
+  <i class="fa-solid fa-seedling" aria-hidden="true"></i>
+  <div>
+    <h3>No open positions at the moment</h3>
+    <p>There are currently no advertised vacancies in the Multi-Scale Modelling group. New openings are published here and on the
+       <a href="https://www.zalf.de/en/karriere/stellenangebote/Pages/default.aspx">ZALF vacancies portal</a>. See below for expressions of interest.</p>
+  </div>
+</div>
+
+<div class="section-head" style="margin-top:4rem"><h2 id="past-opportunities">Past opportunities</h2></div>
+<div class="job-list" id="jobs-past">
+  <% past.forEach(j => { %><%- card(j, true) %><% }) %>
+</div>
+<p class="msm-prose" id="jobs-past-empty" style="color:var(--bb-ink-soft)" <%- past.length ? 'hidden' : '' %>>No past adverts are listed.</p>
+```
+
+<script>
+  // Move adverts whose deadline has passed since the last build into "Past opportunities".
+  (function () {
+    var today = new Date(); today.setHours(0, 0, 0, 0);
+    var openL = document.getElementById('jobs-open'), pastL = document.getElementById('jobs-past');
+    if (!openL) return;
+    Array.prototype.slice.call(openL.querySelectorAll('.job')).forEach(function (el) {
+      var d = el.dataset.deadline; if (!d || d === 'open') return;
+      if (new Date(d + 'T23:59:59') < today) {
+        el.classList.add('is-expired');
+        var s = el.querySelector('.status'); if (s) { s.textContent = 'Closed'; s.className = 'status expired'; }
+        var b = el.querySelector('.msm-btn'); if (b) { b.classList.add('ghost'); b.textContent = 'View advert'; }
+        pastL.insertBefore(el, pastL.firstChild);
+      }
+    });
+    document.getElementById('jobs-open-empty').hidden = !!openL.querySelector('.job');
+    document.getElementById('jobs-past-empty').hidden = !!pastL.querySelector('.job');
+  })();
+</script>

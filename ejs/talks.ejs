@@ -1,0 +1,10 @@
+```{=html}
+<ul class="talk-list">
+<% items.forEach(t => { %>
+  <li>
+    <span class="yr"><%= t.year || '—' %></span>
+    <div><span class="tt"><%= t.title %></span><span class="kind"><%= t.kind %></span><br><span class="ev"><%= t.event %></span></div>
+  </li>
+<% }) %>
+</ul>
+```

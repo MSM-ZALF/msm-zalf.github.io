@@ -1,0 +1,12 @@
+---
+title: "SynPAI: UKRI project on hybrid yield prediction"
+description: "Synergising process-based and machine-learning models for explainable crop yield prediction."
+date: "2024-02-01"
+categories: [Projects, Hybrid modelling]
+image: ../assets/news/project.svg
+image-alt: ""
+---
+
+The UKRI-funded project **[SynPAI](https://synpaim.wordpress.com/) — Synergising Process-Based and Machine Learning Models for Accurate and Explainable Crop Yield Prediction along with Environmental Impact Assessment** started in February 2024 and ran until September 2025, with Dr. Amit Kumar Srivastava as principal investigator.
+
+[← All news](../news.qmd){.msm-back}

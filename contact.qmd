@@ -1,0 +1,83 @@
+---
+pagetitle: "Contact · Multi-Scale Modelling (MSM) · ZALF"
+description: "Contact the Multi-Scale Modelling (MSM) working group at ZALF, Eberswalder Straße 84, 15374 Müncheberg, Germany — address, contact persons and directions."
+page-layout: full
+listing:
+  - id: Contacts
+    template: ejs/contact-cards.ejs
+    contents: team/members.yml
+    sort: false
+---
+
+```{=html}
+<header class="msm-page-head">
+  <div class="bb-eyebrow">Contact</div>
+  <h1>Get<br><span class="ln2">in touch.</span></h1>
+  <p class="msm-lede">For questions about our research, collaborations, theses or positions, please contact one of the people below.</p>
+</header>
+```
+
+:::: {.page-section}
+
+## Contact persons {#people}
+
+::: {#Contacts}
+:::
+
+::::
+
+:::: {.page-section .section-tint}
+
+```{=html}
+<div class="msm-contact-grid">
+  <div>
+    <h2 id="address">Address</h2>
+    <address class="msm-address">
+      <strong>Multi-Scale Modelling (MSM)</strong><br>
+      Research Area 4 “Simulation and Data Science”<br>
+      Leibniz-Zentrum für Agrarlandschaftsforschung (ZALF) e. V.<br>
+      Eberswalder Straße 84<br>
+      15374 Müncheberg<br>
+      Germany
+    </address>
+    <dl class="msm-facts" style="margin-top:1.4rem">
+      <dt>Phone (switchboard)</dt><dd><a href="tel:+4933432820">+49 (0)33432 82-0</a></dd>
+      <dt>Fax</dt><dd>+49 (0)33432 82-212</dd>
+      <dt>Map</dt><dd><a href="https://www.openstreetmap.org/search?query=Eberswalder%20Stra%C3%9Fe%2084%2C%2015374%20M%C3%BCncheberg">Open in OpenStreetMap</a></dd>
+    </dl>
+  </div>
+  <div>
+    <h2 id="directions">Getting here</h2>
+    <div class="msm-card">
+      <span class="msm-kicker"><i class="fa-solid fa-train" aria-hidden="true"></i>&nbsp; By train</span>
+      <p>From Berlin Hauptbahnhof take the S5 or S7 to Berlin-Lichtenberg, then the RB26 towards Kostrzyn (PL) to Müncheberg station. From there take bus 939 towards Müncheberg-Stadt to the stop “Müncheberg, ZALF” (one stop).</p>
+    </div>
+    <div class="msm-card" style="margin-top:16px">
+      <span class="msm-kicker"><i class="fa-solid fa-car" aria-hidden="true"></i>&nbsp; By car</span>
+      <p>From Berlin take federal road B1 towards Frankfurt (Oder), exit at Müncheberg and continue about 3 km towards Eberswalde.</p>
+    </div>
+    <p class="msm-note">Full directions: <a href="https://www.zalf.de/en/ueber_uns/kontakt_anfahrt/Pages/default.aspx">ZALF contact &amp; location</a>.</p>
+  </div>
+</div>
+```
+
+::::
+
+:::: {.page-section}
+
+## Links {#links}
+
+```{=html}
+<div class="msm-cards">
+  <a class="msm-card" href="https://www.zalf.de/en/struktur/pb4/Pages/Arbeitsgruppen.aspx#x90x"><span class="msm-kicker">ZALF</span><h3>MSM on the ZALF website</h3><span class="more">Working groups of RA 4</span></a>
+  <a class="msm-card" href="https://www.zalf.de/en/struktur/pb4/Pages/default.aspx"><span class="msm-kicker">ZALF</span><h3>Research Area 4 “Simulation and Data Science”</h3><span class="more">Research area</span></a>
+  <a class="msm-card" href="https://www.zalf.de/en/ueber_uns/mitarbeiter/Pages/default_ag.aspx?idxs=x90x"><span class="msm-kicker">ZALF</span><h3>Staff directory (MSM)</h3><span class="more">Directory</span></a>
+  <a class="msm-card" href="https://www.zalf.de/en/karriere/Pages/default.aspx"><span class="msm-kicker">ZALF</span><h3>Careers at ZALF</h3><span class="more">Career</span></a>
+</div>
+<p style="margin-top:1.6rem;font-family:var(--bb-font-sans)">ZALF on social media:
+  <a href="https://wisskomm.social/@ZALF_leibniz" rel="me">Mastodon</a> ·
+  <a href="https://bsky.app/profile/zalf.bsky.social">Bluesky</a> ·
+  <a href="https://www.linkedin.com/company/zalf-leibniz">LinkedIn</a></p>
+```
+
+::::

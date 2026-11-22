@@ -1,0 +1,12 @@
+---
+title: "SUSTAINCrop: new EU Horizon project"
+description: "MSM joins the EU Horizon project SUSTAINCrop as a principal investigator."
+date: "2026-04-01"
+categories: [Projects, EU]
+image: ../assets/news/project.svg
+image-alt: ""
+---
+
+The EU Horizon project **SUSTAINCrop** started in April 2026 and runs until March 2029. Dr. Amit Kumar Srivastava is a principal investigator in the project.
+
+[← All news](../news.qmd){.msm-back}

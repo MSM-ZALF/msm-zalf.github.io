@@ -1,0 +1,22 @@
+```{=html}
+<%
+  // Home page: featured projects that are still running.
+  const now = new Date();
+  const endDate = e => { if (!e || String(e).toLowerCase() === 'present') return null;
+    const [y, m] = String(e).split('-').map(Number); return m ? new Date(y, m, 0, 23, 59) : new Date(y, 11, 31, 23, 59); };
+  const fmt = d => { if (!d) return ''; const [y, m] = String(d).split('-'); return m ? m + '/' + y : y; };
+  const list = items.filter(p => (p.featured === true || p.featured === 'true') && (endDate(p.end) === null || endDate(p.end) >= now)).slice(0, 4);
+%>
+<div class="proj-grid">
+<% list.forEach(p => { %>
+  <article class="proj">
+    <div class="top"><h3 class="acr"><%= p.acronym %></h3><span class="status ongoing"><%= fmt(p.start) %> – <%= fmt(p.end) %></span></div>
+    <p class="ttl"><%= p.title %></p>
+    <dl>
+      <% if (p.funder) { %><dt>Funder</dt><dd><%= p.funder %></dd><% } %>
+      <% if (p.role) { %><dt>MSM role</dt><dd><%= p.role %></dd><% } %>
+    </dl>
+  </article>
+<% }) %>
+</div>
+```

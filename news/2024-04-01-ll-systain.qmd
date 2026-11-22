@@ -1,0 +1,12 @@
+---
+title: "Leibniz-Lab “Systemic Sustainability” launched"
+description: "MSM is co-coordinator and principal investigator in LL-SYSTAIN."
+date: "2024-04-01"
+categories: [Projects, Leibniz]
+image: ../assets/news/project.svg
+image-alt: ""
+---
+
+The Leibniz-Lab **“Systemic Sustainability” ([LL-SYSTAIN](https://www.ll-systain.org/))**, funded by the Leibniz Association, started in April 2024 and runs until March 2027. Dr. Amit Kumar Srivastava is co-coordinator and principal investigator.
+
+[← All news](../news.qmd){.msm-back}

@@ -1,0 +1,39 @@
+# Books, book chapters and reports
+# Source: group leader's CV (documents/msm/CV.docx), cross-checked for format only.
+# Newest first. To add an entry, copy a block and edit it. Fields:
+#   title, authors, year, journal (venue), volume, doi (full https://doi.org/ URL),
+#   url (non-DOI link), type: book
+# Optional: code_url, data_url, preprint_url, bibtex (link to .bib file)
+
+- title: "Decision-Making Tools for Integrated Disease Management"
+  authors: "Singh, K.P., Srivastava, A."
+  year: "2020"
+  journal: "In: Emerging Trends in Plant Pathology"
+  doi: "https://doi.org/10.1007/978-981-15-6275-4_31"
+  type: "book"
+- title: "Modeling the effects of different mineral and organic fertilizers on yields and the environment in typical farming systems in selected regions of NRW"
+  authors: "Gaiser, T., Srivastava, A., Enders, A."
+  year: "2019"
+  journal: "Forschungsbericht 191, University of Bonn (USL)"
+  url: "https://www.usl.uni-bonn.de/pdf/Forschungsbericht%20191.pdf"
+  type: "book"
+- title: "Still a challenge – interaction of biophysical and economic models for crop production and market analysis"
+  authors: "Fernandez, F.J., Srivastava, A.K., et al."
+  year: "2014"
+  journal: "EU 7th Framework Programme (ULYSSES), Project 312182 KBBE.2012.1.4-05"
+  type: "book"
+- title: "Climate Impacts in Europe: Results from the JRC PESETA II Project"
+  authors: "Ciscar, J-C., Srivastava, A.K., et al."
+  year: "2014"
+  journal: "JRC Scientific and Political Reports, EUR26586EN"
+  type: "book"
+- title: "Assessing agriculture vulnerabilities for the design of effective measures for adaptation to climate change"
+  authors: "Donatelli, M., Duvellier, G., Fumagalli, D., Srivastava, A.K., et.al."
+  year: "2012"
+  journal: "Institute for Environment and Sustainability, Joint Research Centre, Italy. ISBN 978-92-79-23344-9"
+  type: "book"
+- title: "Management of Yam Production"
+  authors: "Srivastava, A.K."
+  year: "2010"
+  journal: "VDM Verlag Dr. Müller, Germany. ISBN 978-3-639-13878-8"
+  type: "book"

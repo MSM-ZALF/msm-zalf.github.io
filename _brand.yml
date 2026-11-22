@@ -1,0 +1,55 @@
+# _brand.yml — Multi-Scale Modelling (MSM) · ZALF
+# Quarto brand definition. Quarto reads this to generate the core Bootstrap
+# theme variables (colours, fonts, links). Component styling lives in theme.scss.
+# Docs: https://quarto.org/docs/authoring/brand.html
+#
+# The palette is the earthy "agricultural landscape" palette of the reference
+# framework. Text colours were darkened slightly so that body text, links and
+# meta text meet WCAG AA contrast (≥ 4.5:1) on the cream backgrounds.
+# To align with an updated ZALF corporate design, change the values here AND
+# the mirrored Sass/CSS variables at the top of theme.scss.
+
+meta:
+  name: Multi-Scale Modelling (MSM) · ZALF
+  link: https://www.zalf.de/en/struktur/pb4/Pages/Arbeitsgruppen.aspx#x90x
+
+color:
+  palette:
+    cream:       "#F4EEE2"   # page background
+    cream-2:     "#EFE7D7"   # alternating section background
+    surface:     "#FBF7EE"   # cards / raised surfaces
+    ink:         "#2B2620"   # primary text (warm near-black)
+    ink-soft:    "#6B6253"   # secondary text
+    ink-faint:   "#6F6858"   # meta / muted text (AA on cream)
+    forest:      "#36513C"   # primary green
+    forest-deep: "#233827"   # darkest green (footer, deep accents)
+    olive:       "#6E7350"
+    sage:        "#97A083"
+    burnt:       "#BC5C32"   # burnt-orange accent (decorative)
+    burnt-text:  "#A84F26"   # accent used for text/links (AA on cream)
+    burnt-deep:  "#8E3F1E"
+    tan:         "#DAC6A0"
+    sand:        "#E8DCC4"
+
+  foreground: ink
+  background: cream
+  primary:    forest
+  secondary:  olive
+  link:       burnt-text
+
+typography:
+  # Satoshi is not on Google Fonts — it is loaded via header.html (Fontshare CDN).
+  base:
+    family: Spectral          # readable serif for body / long-form text
+    line-height: 1.65
+    size: 1.05rem
+  headings:
+    family: Satoshi           # geometric sans for headings + UI
+    weight: 700
+    color: ink
+  monospace:
+    family: "JetBrains Mono"
+    size: 0.9em
+  link:
+    color: burnt-text
+    decoration: none

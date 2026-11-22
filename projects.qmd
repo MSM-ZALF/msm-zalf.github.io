@@ -1,0 +1,29 @@
+---
+pagetitle: "Projects · Multi-Scale Modelling (MSM) · ZALF"
+description: "Ongoing and completed research projects, collaborations and third-party funding of the Multi-Scale Modelling (MSM) working group at ZALF."
+page-layout: full
+listing:
+  - id: Projects
+    template: ejs/projects.ejs
+    contents: projects/projects.yml
+    sort: false
+---
+
+```{=html}
+<header class="msm-page-head">
+  <div class="bb-eyebrow">Projects</div>
+  <h1>Research projects<br><span class="ln2">&amp; funding.</span></h1>
+  <p class="msm-lede">Third-party funded projects with national and international partners — from the EU, BMBF, DFG, UKRI and the Leibniz Association to the African Union. Project status updates automatically from each project's end date.</p>
+</header>
+```
+
+:::: {.page-section}
+
+::: {#Projects}
+:::
+
+```{=html}
+<p class="msm-note">All projects of the working group are also listed in the <a href="https://www.zalf.de/en/forschung_lehre/projekte/Pages/default_ag.aspx?idxs=x90x">ZALF project database</a>.</p>
+```
+
+::::

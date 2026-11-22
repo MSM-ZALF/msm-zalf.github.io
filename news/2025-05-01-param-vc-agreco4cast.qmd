@@ -1,0 +1,15 @@
+---
+title: "Two new BMBF projects: PARAM-VC and AGRECO4CAST"
+description: "Projects on AI-based resilience modelling and on agroecological transitions of agroforestry landscapes start."
+date: "2025-05-01"
+categories: [Projects, BMBF]
+image: ../assets/news/project.svg
+image-alt: ""
+---
+
+Two projects funded by the German Federal Ministry of Education and Research (BMBF) started in May 2025 and run until April 2028:
+
+- **PARAM-VC — Promoting Agricultural Resilience with AI-based Modeling and Value Chain Analysis** (BMBF + DST). MSM coordinates the project; Dr. Amit Kumar Srivastava is coordinator and principal investigator.
+- **[AGRECO4CAST](https://www.agroecologypartnership.eu/agreco4cast) — Supporting Agroecological Transitions of Agroforestry Landscapes using an Innovative Transdisciplinary Assessment Framework.** Dr. Amit Kumar Srivastava is a principal investigator.
+
+[← All news](../news.qmd){.msm-back}

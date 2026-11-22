@@ -1,0 +1,22 @@
+```{=html}
+<%
+  // Contact persons = members with `contact: true` in team/members.yml
+  const people = items.filter(m => m.contact === true || m.contact === 'true')
+                      .sort((a, b) => (a.group === 'Group lead' ? -1 : 0) - (b.group === 'Group lead' ? -1 : 0));
+%>
+<div class="msm-cards cols-2">
+<% people.forEach(m => { %>
+  <div class="msm-card">
+    <span class="msm-kicker"><%= m.group === 'Group lead' ? 'Working group contact' : 'Scientific contact' %></span>
+    <h3><%= m.name %></h3>
+    <p><%= m.role %></p>
+    <p style="font-family:var(--bb-font-sans);font-size:.95rem;">
+      <% if (m.email) { %><i class="fa-solid fa-envelope" aria-hidden="true"></i> <a href="mailto:<%- m.email %>"><%= m.email %></a><br><% } %>
+      <% if (m.phone) { %><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:<%- m.phone.replace(/[^+\d]/g, '') %>"><%= m.phone %></a><br><% } %>
+      <% if (m.zalf_profile) { %><i class="fa-solid fa-id-badge" aria-hidden="true"></i> <a href="<%- m.zalf_profile %>">ZALF profile</a><br><% } %>
+      <% if (m.page) { %><i class="fa-solid fa-user" aria-hidden="true"></i> <a href="<%- m.page %>">Profile on this site</a><% } %>
+    </p>
+  </div>
+<% }) %>
+</div>
+```

@@ -1,0 +1,107 @@
+---
+pagetitle: "Research · Multi-Scale Modelling (MSM) · ZALF"
+description: "Research themes, methods and scientific contributions of the MSM working group at ZALF: cross-scale farm-system modelling, hybrid AI–process modelling, climate impacts, yield forecasting and model intercomparison."
+page-layout: full
+listing:
+  - id: Research-themes
+    template: ejs/research_themes.ejs
+    contents: research/themes.yml
+    sort: false
+  - id: Pub-stats
+    template: ejs/pub_stats.ejs
+    contents:
+      - publications/journal-articles.yml
+      - publications/conference-contributions.yml
+    sort: false
+---
+
+```{=html}
+<header class="msm-page-head">
+  <div class="bb-eyebrow">Research</div>
+  <h1>From fields<br><span class="ln2">to markets.</span></h1>
+  <p class="msm-lede">Our research connects processes across spatial and organisational scales. We combine process-based simulation with data-driven methods to understand and anticipate how cropping systems respond to climate, management, markets and policy.</p>
+</header>
+```
+
+:::: {.page-section}
+
+## Research themes {#themes}
+
+::: {#Research-themes}
+:::
+
+::::
+
+:::: {.page-section .section-tint}
+
+## Methods & tools {#methods}
+
+```{=html}
+<div class="msm-cards">
+  <div class="msm-card">
+    <span class="ico"><i class="fa-solid fa-seedling" aria-hidden="true"></i></span>
+    <h3>Modelling frameworks</h3>
+    <ul class="msm-refs">
+      <li><a href="https://www.simplace.net/">SIMPLACE</a> — Scientific Impact Assessment and Modelling Platform for Advanced Crop and Ecosystem Management</li>
+      <li><a href="http://www.biomamodelling.org/">BioMA</a> — Biophysical Models Applications framework, from prototype to operational applications</li>
+      <li><a href="https://marswiki.jrc.ec.europa.eu/agri4castwiki/index.php/Welcome_to_WikiMCYFS">MCYFS</a> — MARS Crop Yield Forecasting System for crop monitoring and yield forecasting</li>
+    </ul>
+  </div>
+  <div class="msm-card">
+    <span class="ico"><i class="fa-solid fa-brain" aria-hidden="true"></i></span>
+    <h3>Machine &amp; deep learning</h3>
+    <ul class="msm-refs">
+      <li>Ensemble learning, convolutional neural networks and foundation models</li>
+      <li>Hybrid process-based + ML modelling</li>
+      <li>Explainable AI (XAI)</li>
+    </ul>
+  </div>
+  <div class="msm-card">
+    <span class="ico"><i class="fa-solid fa-earth-europe" aria-hidden="true"></i></span>
+    <h3>Earth observation &amp; geodata</h3>
+    <ul class="msm-refs">
+      <li>Optical (e.g. Sentinel-2) and SAR imagery</li>
+      <li>Crop-type mapping and yield mapping</li>
+      <li>GIS and geospatial data science with Python, QGIS and ArcGIS</li>
+    </ul>
+  </div>
+  <div class="msm-card">
+    <span class="ico"><i class="fa-solid fa-cloud-sun-rain" aria-hidden="true"></i></span>
+    <h3>Climate &amp; scenario data</h3>
+    <ul class="msm-refs">
+      <li>Climate scenarios and regional climate model data</li>
+      <li>Uni- and multivariate bias adjustment</li>
+      <li>Multi-model ensembles (AgMIP)</li>
+    </ul>
+  </div>
+  <div class="msm-card">
+    <span class="ico"><i class="fa-solid fa-server" aria-hidden="true"></i></span>
+    <h3>Computing &amp; data</h3>
+    <ul class="msm-refs">
+      <li>High-performance scientific computing</li>
+      <li>FAIR research data (FAIRagro / NFDI)</li>
+      <li>Linux and Python-based workflows</li>
+    </ul>
+  </div>
+</div>
+```
+
+::::
+
+:::: {.page-section}
+
+## Scientific contributions {#contributions}
+
+::: {.msm-prose}
+Group members have contributed to a broad body of peer-reviewed work on crop and cropping-system modelling, climate-impact assessment, hybrid modelling and Earth observation, including large international model-intercomparison studies.
+:::
+
+::: {#Pub-stats}
+:::
+
+```{=html}
+<p style="margin-top:2rem"><a class="msm-btn" href="publications.html">Browse all publications</a>
+<a class="msm-btn ghost" href="https://scholar.google.com/citations?hl=en&user=qRFKdHwAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a></p>
+```
+
+::::

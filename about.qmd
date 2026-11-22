@@ -1,0 +1,135 @@
+---
+pagetitle: "About · Multi-Scale Modelling (MSM) · ZALF"
+description: "About the Multi-Scale Modelling (MSM) working group: mission, objectives and institutional affiliation within Research Area 4 'Simulation and Data Science' at ZALF."
+page-layout: full
+---
+
+```{=html}
+<header class="msm-page-head">
+  <div class="bb-eyebrow">About the group</div>
+  <h1>Modelling farm systems<br><span class="ln2">across scales.</span></h1>
+  <p class="msm-lede">The Multi-Scale Modelling (MSM) working group at the Leibniz Centre for Agricultural Landscape Research (ZALF) develops and applies cross-scale models of farm systems to understand, forecast and evaluate how cropping systems respond to climate, markets and policy.</p>
+</header>
+```
+
+:::: {.page-section}
+
+## Overview {#overview}
+
+::: {.msm-prose}
+MSM works on the cross-scale modelling of farm systems. The group places a strong emphasis on **hybrid modelling** — integrating different types of models, such as biophysical, hydrological, ecological, farm and market models, with data-driven artificial-intelligence models. It develops methods for combining models with data from sensors, remote sensing and climate products, and links simulation with indicator frameworks to assess the sustainability and resilience of cropping systems.
+
+The work spans fields, farms, landscapes, regions and markets. It aims to support farmers and policymakers in operational, tactical and strategic decision-making. A particular focus is on forecasting and evaluating changes driven by climate, market dynamics and policy.
+:::
+
+```{=html}
+<ol class="msm-ladder" aria-label="Spatial and organisational scales addressed by MSM">
+  <li>Field<small>crops &amp; soils</small></li>
+  <li>Farm<small>management</small></li>
+  <li>Landscape<small>land use</small></li>
+  <li>Region<small>production systems</small></li>
+  <li>Market<small>value chains &amp; policy</small></li>
+</ol>
+```
+
+::::
+
+:::: {.page-section .section-tint}
+
+## Mission & objectives {#mission}
+
+::: {.msm-prose}
+**Mission.** To provide robust, cross-scale model-based evidence on how farm and cropping systems respond to climate, market and policy change, and to translate that evidence into decision support for farmers and policymakers.
+:::
+
+```{=html}
+<ul class="msm-cards cols-2" style="margin-top:1.6rem">
+  <li class="msm-card"><span class="ico"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i></span>
+    <h3>Integrate models and AI</h3><p>Couple biophysical, hydrological, ecological, farm and market models with data-driven AI models in hybrid modelling frameworks.</p></li>
+  <li class="msm-card"><span class="ico"><i class="fa-solid fa-satellite-dish" aria-hidden="true"></i></span>
+    <h3>Combine models with data</h3><p>Develop methods to bring together models and data from sensors, remote sensing and climate products.</p></li>
+  <li class="msm-card"><span class="ico"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i></span>
+    <h3>Assess sustainability &amp; resilience</h3><p>Link simulations with indicator frameworks to assess the sustainability and resilience of cropping systems.</p></li>
+  <li class="msm-card"><span class="ico"><i class="fa-solid fa-chess-knight" aria-hidden="true"></i></span>
+    <h3>Support decisions</h3><p>Inform operational, tactical and strategic decisions of farmers and policymakers by forecasting and evaluating the effects of climate, market dynamics and policy.</p></li>
+</ul>
+```
+
+::::
+
+:::: {.page-section}
+
+## Institutional affiliation {#affiliation}
+
+```{=html}
+<dl class="msm-facts">
+  <dt>Institute</dt>
+  <dd><a href="https://www.zalf.de/">Leibniz Centre for Agricultural Landscape Research (ZALF)</a>, Müncheberg, Germany — a member of the Leibniz Association.</dd>
+  <dt>Research area</dt>
+  <dd><a href="https://www.zalf.de/en/struktur/pb4/Pages/default.aspx">Research Area 4 “Simulation and Data Science”</a>, which develops a coherent concept for the integration of data, models and simulation methods for landscape research.</dd>
+  <dt>Working group</dt>
+  <dd><a href="https://www.zalf.de/en/struktur/pb4/Pages/Arbeitsgruppen.aspx#x90x">Multi-Scale Modelling (MSM)</a></dd>
+  <dt>Sister groups in RA 4</dt>
+  <dd>Dimensionality Assessment and Reduction · Landscape Modelling · Ecosystem Modelling · Artificial Intelligence · Remote Sensing for Agriculture</dd>
+  <dt>ZALF records</dt>
+  <dd><a href="https://www.zalf.de/en/forschung_lehre/publikationen/Pages/default_ag.aspx?idxs=x90x">Publications</a> · <a href="https://www.zalf.de/en/forschung_lehre/projekte/Pages/default_ag.aspx?idxs=x90x">Projects</a> · <a href="https://www.zalf.de/en/ueber_uns/mitarbeiter/Pages/default_ag.aspx?idxs=x90x">Staff</a> of the working group in the ZALF databases</dd>
+</dl>
+```
+
+::::
+
+:::: {.page-section .section-tint}
+
+## Teaching {#teaching}
+
+::: {.msm-prose}
+Group members teach in MSc programmes at the [University of Bonn](https://www.uni-bonn.de/):
+:::
+
+```{=html}
+<ul class="msm-timeline" style="margin-top:1rem">
+  <li><span class="t">Since 2026</span><span>PH-140 — Integrated Assessment Modelling</span></li>
+  <li><span class="t">Since 2022</span><span>NALA-026 — GIS: basic concepts and applications</span></li>
+  <li><span class="t">Since 2022</span><span>NPW-016 — Research in Cropping Systems</span></li>
+  <li><span class="t">Since 2018</span><span>NALA-029 — Crop and Ecosystem Analysis and Modelling</span></li>
+</ul>
+```
+
+::::
+
+:::: {.page-section}
+
+## Networks & scientific service {#networks}
+
+::: {.msm-prose}
+Group members are active in international modelling communities and research infrastructures, and serve the scientific community as editors and reviewers.
+:::
+
+```{=html}
+<div class="msm-cards cols-2" style="margin-top:1.4rem">
+  <div class="msm-card">
+    <span class="msm-kicker">Networks &amp; memberships</span>
+    <ul class="msm-refs">
+      <li><a href="https://agmip.org/">AgMIP</a> — Agricultural Model Intercomparison and Improvement Project</li>
+      <li><a href="https://fairagro.net/en/about-us/our-mission/">FAIRagro</a> — National Research Data Infrastructure (NFDI)</li>
+      <li><a href="https://www.ll-systain.org/">Leibniz-Lab “Systemic Sustainability”</a> (LL-SYSTAIN)</li>
+      <li>Cluster of Excellence <a href="http://www.phenorob.de/">PhenoRob</a>, University of Bonn</li>
+      <li>Transdisciplinary Research Areas TRA1 “Modelling” and TRA6 “Sustainable Futures”, University of Bonn</li>
+      <li>European Geosciences Union (EGU) · American Geophysical Union (AGU)</li>
+      <li>Food Security Information Network (FSIN) · BiomassNet Dgroup</li>
+    </ul>
+  </div>
+  <div class="msm-card">
+    <span class="msm-kicker">Editorial service</span>
+    <ul class="msm-refs">
+      <li>Editorial board, <a href="https://www.sciencedirect.com/journal/field-crops-research"><i>Field Crops Research</i></a></li>
+      <li>Review editor, <i>Frontiers in Agronomy</i> — <a href="https://www.frontiersin.org/journals/agronomy/sections/climate-smart-agronomy">Climate-Smart Agronomy</a></li>
+      <li>Editorial board, <i>Acta Scientific Agriculture</i>; <i>Global Journal of Agriculture and Soil Science</i></li>
+      <li>Guest editor, special issues in <i>Atmosphere</i>, <i>Agronomy</i> and <i>Sustainability</i> (MDPI) and <i>Frontiers in Agronomy</i></li>
+      <li>Expert, European Commission Funding &amp; Tenders portal</li>
+    </ul>
+  </div>
+</div>
+```
+
+::::

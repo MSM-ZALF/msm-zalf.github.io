@@ -1,0 +1,58 @@
+# =====================================================================
+#  MSM team members  —  rendered by ejs/team.ejs (team page) and
+#  ejs/contact-cards.ejs (contact page, entries with `contact: true`).
+#
+#  Add a person: copy the TEMPLATE block at the bottom, uncomment it, fill it in.
+#  Remove a person: delete their block (or move them to group "Alumni").
+#
+#  group  — one of (shown in this order; empty groups are hidden):
+#           "Group lead" | "Senior scientists" | "Postdoctoral researchers" |
+#           "PhD students" | "Research staff" | "Student assistants & interns" | "Alumni"
+#  order  — sort order within a group (lower first)
+#  photo  — square-ish image in assets/team/ (optional; initials are shown otherwise)
+#  page   — optional profile page, e.g. team/jane-doe.qmd → "team/jane-doe.html"
+#
+#  Sources: ZALF working-group page (contact person) and the CV in documents/msm.
+# =====================================================================
+
+- name: "Prof. Dr. Frank Ewert"
+  short: "Frank Ewert"
+  group: "Group lead"
+  order: 1
+  role: "Contact person for the working group · Scientific Director of ZALF"
+  bio: "Listed by ZALF as the contact for the Multi-Scale Modelling working group in Research Area 4 “Simulation and Data Science”."
+  phone: "+49 (0)33432 82-200"
+  zalf_profile: "https://www.zalf.de/en/ueber_uns/mitarbeiter/Pages/ewert_f.aspx"
+  contact: true
+
+- name: "Dr. Amit Kumar Srivastava"
+  short: "Amit Kumar Srivastava"
+  group: "Senior scientists"
+  order: 1
+  role: "Tenure-Track Senior Scientist (since 05/2024)"
+  photo: "assets/team/srivastava.jpg"
+  bio: "Crop and cropping-systems modeller working on integrated farm-system analysis, climate-change impacts on crop production, cropping-system responses to management and climate, and crop yield forecasting."
+  email: "AmitKumar.Srivastava@zalf.de"
+  orcid: "https://orcid.org/0000-0001-8219-4854"
+  scholar: "https://scholar.google.com/citations?hl=en&user=qRFKdHwAAAAJ&view_op=list_works&sortby=pubdate"
+  page: "team/srivastava.html"
+  contact: true
+
+# ---------------------------------------------------------------------
+# TEMPLATE — copy, uncomment and edit
+# ---------------------------------------------------------------------
+# - name: "Jane Doe, M.Sc."
+#   short: "Jane Doe"
+#   group: "PhD students"
+#   order: 1
+#   role: "PhD candidate — hybrid crop modelling"
+#   photo: "assets/team/doe.jpg"
+#   bio: "One or two sentences about the research focus."
+#   email: "jane.doe@zalf.de"
+#   orcid: "https://orcid.org/0000-0000-0000-0000"
+#   scholar: ""
+#   github: ""
+#   website: ""
+#   zalf_profile: ""
+#   page: ""          # e.g. "team/doe.html" if you add team/doe.qmd
+#   contact: false    # true = also listed on the Contact page

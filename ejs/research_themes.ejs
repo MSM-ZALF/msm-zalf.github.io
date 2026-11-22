@@ -1,0 +1,18 @@
+```{=html}
+<% items.forEach((t, i) => { %>
+<section class="msm-theme" aria-labelledby="<%= t.id %>">
+  <div class="num" aria-hidden="true"><%= String(i + 1).padStart(2, '0') %></div>
+  <div>
+    <h3 id="<%= t.id %>"><%= t.title %></h3>
+    <p><%= t.body %></p>
+    <% if (t.tags) { %><div class="msm-tags"><% t.tags.forEach(g => { %><span class="msm-tag"><%= g %></span><% }) %></div><% } %>
+    <% if (t.refs) { %>
+    <ul class="msm-refs" aria-label="Selected contributions">
+      <% t.refs.forEach(r => { %><li><%= r.text %><% if (r.venue) { %>. <i><%= r.venue %></i><% } %><% if (r.doi) { %> · <a href="<%- r.doi %>">DOI</a><% } %><% if (r.url) { %> · <a href="<%- r.url %>">Details</a><% } %></li><% }) %>
+    </ul>
+    <% } %>
+    <% if (t.query) { %><p style="margin-top:14px"><a class="section-more" href="publications.html?q=<%= encodeURIComponent(t.query) %>">Related publications</a></p><% } %>
+  </div>
+</section>
+<% }) %>
+```

@@ -1,0 +1,113 @@
+# =====================================================================
+#  Research themes  —  rendered by ejs/research_cards.ejs (home page)
+#  and ejs/research_themes.ejs (research page).
+#
+#  Sources: MSM description on the ZALF working-group page, the research
+#  profile in the CV (documents/msm) and the group's publications.
+#  refs: representative publications (text = authors, year, title; venue = journal)
+#  Note: no HTML inside data values — Quarto escapes it. Formatting lives in ejs/.
+#  query: search term used for the "all related publications" link
+# =====================================================================
+
+- id: cross-scale
+  icon: "fa-solid fa-layer-group"
+  title: "Cross-scale farm-system modelling"
+  summary: "Modelling farm systems across fields, farms, landscapes, regions and markets to support operational, tactical and strategic decisions."
+  body: "MSM develops and applies models that link processes across scales — from the field and the farm to landscapes, regions and markets. A focus is integrated farm-system analysis, including mixed crop–livestock systems, and the coupling of crop models with bio-economic farm models, so that results can inform operational, tactical and strategic decisions of farmers and policymakers."
+  tags: ["Field → market", "Integrated farm systems", "Mixed crop–livestock", "SIMPLACE"]
+  query: "farm"
+  refs:
+    - text: "Srivastava et al. (2025) Modelling mixed crop-livestock systems and climate impact in assessment in sub-Saharan Africa"
+      venue: "Scientific Reports"
+      doi: "https://doi.org/10.1038/s41598-024-81986-8"
+    - text: "Kuhn et al. (2019) Coupling crop and bio-economic farm modelling to evaluate the revised fertilization regulations in Germany"
+      venue: "Agricultural Systems"
+      doi: "https://doi.org/10.1016/j.agsy.2019.102687"
+    - text: "Enders et al. (2023) SIMPLACE — A versatile modelling and simulation framework for sustainable crops and agroecosystems"
+      venue: "in silico Plants"
+      doi: "https://doi.org/10.1093/insilicoplants/diad006"
+
+- id: hybrid
+  icon: "fa-solid fa-diagram-project"
+  title: "Hybrid modelling: process-based models meet AI"
+  summary: "Combining biophysical, hydrological, ecological, farm and market models with data-driven AI models."
+  body: "A strong emphasis of the group is hybrid modelling: integrating different model types — biophysical, hydrological, ecological, farm and market models — with data-driven artificial-intelligence models. Hybrid approaches pair the process understanding of crop and agroecosystem models with machine and deep learning to improve the accuracy and explainability of predictions."
+  tags: ["Machine learning", "Deep learning", "Explainable AI", "Process-based models"]
+  query: "machine learning"
+  refs:
+    - text: "Rahimi et al. (2025) Integrating machine learning with agroecosystem modelling: current state and future challenges"
+      venue: "European Journal of Agronomy"
+      doi: "https://doi.org/10.1016/j.eja.2025.127610"
+    - text: "Srivastava et al. (2022) Winter wheat yield prediction using convolutional neural networks from environmental and phenological data"
+      venue: "Scientific Reports"
+      doi: "https://doi.org/10.1038/s41598-022-06249-w"
+    - text: "Tan et al. (2024) Overcoming mechanistic limitations of process-based phenological models: A data clustering method for large-scale applications"
+      venue: "Agricultural and Forest Meteorology"
+      doi: "https://doi.org/10.1016/j.agrformet.2024.110167"
+
+- id: climate
+  icon: "fa-solid fa-temperature-arrow-up"
+  title: "Climate impacts, adaptation and resilience"
+  summary: "Forecasting and evaluating the effects of climate change, market dynamics and policy on cropping systems."
+  body: "Forecasting and evaluating changes driven by climate, market dynamics and policy is a core focus. The group assesses climate-change impacts on crop production and cropping-system responses to management and climate, and evaluates adaptation options — with extensive work in sub-Saharan Africa, Europe and beyond."
+  tags: ["Climate change", "Adaptation", "Extreme events", "Sub-Saharan Africa"]
+  query: "climate change"
+  refs:
+    - text: "Martre et al. (2024) Global nitrogen needs to improve wheat yield under climate change"
+      venue: "Nature Plants"
+      doi: "https://doi.org/10.1038/s41477-024-01739-3"
+    - text: "Couëdel et al. (2026) Beyond climate change: The role of integrated soil fertility management for sustaining future maize yield in sub-Saharan Africa"
+      venue: "Global Change Biology"
+      doi: "https://doi.org/10.1111/gcb.70720"
+    - text: "Webber et al. (2025) Wheat crop models underestimate drought stress in semi-arid and Mediterranean environments"
+      venue: "Field Crops Research"
+      doi: "https://doi.org/10.1016/j.fcr.2025.110032"
+
+- id: forecasting
+  icon: "fa-solid fa-satellite"
+  title: "Yield forecasting and Earth observation"
+  summary: "Combining models with sensor, remote-sensing and climate data for crop mapping, monitoring and yield forecasting."
+  body: "MSM develops methods for combining models and data — from sensors, remote sensing and climate products — for crop mapping, crop monitoring and yield forecasting, from pixels to regions. This builds on experience with operational crop monitoring and yield forecasting systems such as the MARS Crop Yield Forecasting System (MCYFS)."
+  tags: ["Remote sensing", "Optical & SAR", "Yield forecasting", "MCYFS"]
+  query: "yield"
+  refs:
+    - text: "Halder et al. (2026) High-resolution maize yield mapping across Africa using earth observation and machine learning, deep learning, and foundation model"
+      venue: "Science of Remote Sensing"
+      doi: "https://doi.org/10.1016/j.srs.2025.100344"
+    - text: "Halder et al. (2025) A robust and scalable crop mapping framework using advanced machine learning and optical and SAR imageries"
+      venue: "Smart Agricultural Technology"
+      doi: "https://doi.org/10.1016/j.atech.2025.101354"
+    - text: "He et al. (2024) Cross-regional crop classification based on Sentinel-2"
+      venue: "Agronomy"
+      doi: "https://doi.org/10.3390/agronomy14051084"
+
+- id: intercomparison
+  icon: "fa-solid fa-chart-column"
+  title: "Model intercomparison and uncertainty"
+  summary: "Multi-model ensembles, calibration protocols and the treatment of climate input data."
+  body: "Group members contribute to international multi-model studies within the Agricultural Model Intercomparison and Improvement Project (AgMIP) to quantify model uncertainty, improve calibration practice and evaluate how climate-data processing, such as bias adjustment, affects impact assessments."
+  tags: ["AgMIP", "Model ensembles", "Calibration", "Bias adjustment"]
+  query: "inter-comparison"
+  refs:
+    - text: "Kimball et al. (2023) Simulation of evapotranspiration and yield of maize: An inter-comparison among 41 maize models"
+      venue: "Agricultural and Forest Meteorology"
+      doi: "https://doi.org/10.1016/j.agrformet.2023.109396"
+    - text: "Wallach et al. (2021) The chaos in calibrating crop models: lessons learned from a multi-model calibration exercise"
+      venue: "Environmental Modelling & Software"
+      doi: "https://doi.org/10.1016/j.envsoft.2021.105206"
+    - text: "Laux et al. (2021) To bias correct or not to bias correct? An agricultural impact modelers' perspective on regional climate model data"
+      venue: "Agricultural and Forest Meteorology"
+      doi: "https://doi.org/10.1016/j.agrformet.2021.108406"
+
+- id: sustainability
+  icon: "fa-solid fa-scale-balanced"
+  title: "Sustainability and resilience assessment"
+  summary: "Linking simulation with indicator frameworks to assess the sustainability and resilience of cropping systems."
+  body: "The group links simulations with indicator frameworks to assess the sustainability and resilience of cropping systems. Current projects apply this to systemic sustainability (Leibniz-Lab LL-SYSTAIN) and to agroecological transitions of agroforestry landscapes using a transdisciplinary assessment framework (AGRECO4CAST)."
+  tags: ["Indicator frameworks", "Resilience", "Agroecology", "Transdisciplinary"]
+  query: "sustainab"
+  refs:
+    - text: "Project LL-SYSTAIN — Leibniz-Lab “Systemic Sustainability” (2024–2027)"
+      url: "projects.html#ongoing"
+    - text: "Project AGRECO4CAST — Supporting agroecological transitions of agroforestry landscapes (2025–2028)"
+      url: "projects.html#ongoing"

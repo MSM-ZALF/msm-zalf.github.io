@@ -1,0 +1,43 @@
+---
+pagetitle: "News · Multi-Scale Modelling (MSM) · ZALF"
+description: "News, project launches, achievements, talks and events from the Multi-Scale Modelling (MSM) working group at ZALF."
+page-layout: full
+listing:
+  - id: News
+    contents: news/*.qmd
+    sort: "date desc"
+    type: grid
+    grid-columns: 3
+    date-format: "MMM YYYY"
+    categories: true
+    fields: [image, date, title, description, categories]
+    feed: true
+  - id: Talks
+    template: ejs/talks.ejs
+    contents: news/talks.yml
+    sort: false
+---
+
+```{=html}
+<header class="msm-page-head">
+  <div class="bb-eyebrow">News</div>
+  <h1>Updates<br><span class="ln2">&amp; events.</span></h1>
+  <p class="msm-lede">Project launches, team news, achievements and announcements from the group. Subscribe via <a href="news.xml">RSS</a>.</p>
+</header>
+```
+
+:::: {.page-section}
+
+::: {#News}
+:::
+
+::::
+
+:::: {.page-section .section-tint}
+
+## Talks, keynotes & workshops {#talks}
+
+::: {#Talks}
+:::
+
+::::

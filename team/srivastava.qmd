@@ -1,0 +1,83 @@
+---
+pagetitle: "Dr. Amit Kumar Srivastava · MSM · ZALF"
+description: "Profile of Dr. Amit Kumar Srivastava, Tenure-Track Senior Scientist in the Multi-Scale Modelling working group at ZALF."
+page-layout: full
+image: ../assets/team/srivastava.jpg
+---
+
+```{=html}
+<div class="msm-profile">
+  <div class="side" role="complementary" aria-label="Contact and profiles">
+    <div class="ph"><img src="../assets/team/srivastava.jpg" alt="Portrait of Amit Kumar Srivastava"></div>
+    <div class="links">
+      <a href="mailto:AmitKumar.Srivastava@zalf.de"><i class="fa-solid fa-envelope" aria-hidden="true"></i> AmitKumar.Srivastava@zalf.de</a>
+      <a href="https://orcid.org/0000-0001-8219-4854"><i class="fa-brands fa-orcid" aria-hidden="true"></i> ORCID 0000-0001-8219-4854</a>
+      <a href="https://scholar.google.com/citations?hl=en&user=qRFKdHwAAAAJ&view_op=list_works&sortby=pubdate"><i class="ai ai-google-scholar" aria-hidden="true"></i> Google Scholar</a>
+      <a href="../publications.html?q=srivastava"><i class="fa-solid fa-book" aria-hidden="true"></i> Publications on this site</a>
+    </div>
+  </div>
+  <div>
+    <div class="bb-eyebrow">Team · Senior scientists</div>
+    <h1 class="bb-name" style="font-size:clamp(2.4rem,5.4vw,4rem)">Amit Kumar<br><span class="ln2">Srivastava.</span></h1>
+    <p class="bb-role">Tenure-Track Senior Scientist<span class="at">, Multi-Scale Modelling · ZALF (since 05/2024)</span></p>
+    <p class="msm-lede">Background in crop and cropping-systems modelling, agronomy, forestry and agri-business management. Research on integrated farm-system analysis, climate-change impacts on crop production, cropping-system processes and their responses to management and climate, and crop yield forecasting.</p>
+
+    <h2 id="experience">Professional experience</h2>
+    <ul class="msm-timeline">
+      <li><span class="t">Since 05/2024</span><span>Tenure-Track Senior Scientist, Leibniz Centre for Agricultural Landscape Research (ZALF), Müncheberg, Germany</span></li>
+      <li><span class="t">01/2014 – 04/2024</span><span>Senior Scientist, Institute of Crop Science and Resource Conservation, University of Bonn, Germany</span></li>
+      <li><span class="t">04/2011 – 12/2013</span><span>Scientific Project Officer, European Commission, Joint Research Centre, Italy</span></li>
+      <li><span class="t">08/2007 – 03/2010</span><span>Research Associate, Institute of Crop Science and Resource Conservation, University of Bonn, Germany</span></li>
+      <li><span class="t">07/2000 – 06/2002</span><span>Assistant Field Officer, Community Development Society, India</span></li>
+    </ul>
+
+    <h2 id="education">Education</h2>
+    <ul class="msm-timeline">
+      <li><span class="t">2007 – 2010</span><span>Doctor of Agricultural Sciences (<i>magna cum laude</i>), Institute of Crop Science and Resource Conservation, University of Bonn, Germany</span></li>
+      <li><span class="t">2005 – 2007</span><span>M.Sc. Tropical Forestry &amp; Management, Technische Universität Dresden, Germany</span></li>
+      <li><span class="t">2002 – 2004</span><span>MBA (Agri-Business), V.B.S. Purvanchal University, India — University Gold Medal (1st rank)</span></li>
+      <li><span class="t">1996 – 2000</span><span>B.Sc. Forest Science (with honours), G.B. Pant University of Agriculture &amp; Technology, Pantnagar, India</span></li>
+    </ul>
+
+    <h2 id="teaching">Teaching (University of Bonn, MSc)</h2>
+    <ul class="msm-timeline">
+      <li><span class="t">Since 2026</span><span>PH-140 — Integrated Assessment Modelling</span></li>
+      <li><span class="t">Since 2022</span><span>NALA-026 — GIS: basic concepts and applications</span></li>
+      <li><span class="t">Since 2022</span><span>NPW-016 — Research in Cropping Systems</span></li>
+      <li><span class="t">Since 2018</span><span>NALA-029 — Crop and Ecosystem Analysis and Modelling</span></li>
+    </ul>
+
+    <h2 id="service">Editorial service &amp; memberships</h2>
+    <ul class="msm-refs">
+      <li>Editorial board member, <i>Field Crops Research</i>; <i>Acta Scientific Agriculture</i>; <i>Global Journal of Agriculture and Soil Science</i></li>
+      <li>Review editor, <i>Frontiers in Agronomy</i> (Climate-Smart Agronomy)</li>
+      <li>Guest editor, <i>Atmosphere</i>, <i>Agronomy</i>, <i>Sustainability</i> (MDPI) and <i>Frontiers in Agronomy</i></li>
+      <li>Reviewer for <i>Field Crops Research</i>, <i>European Journal of Agronomy</i>, <i>Agricultural Systems</i>, <i>Pedosphere</i>, <i>Engineering Applications of Artificial Intelligence</i>, <i>Scientific Reports</i>, <i>Nature Food</i>, <i>Atmosphere</i>, <i>Agronomy</i>, <i>Frontiers in Agronomy</i></li>
+      <li>Member: Cluster of Excellence PhenoRob; TRA1 and TRA6 (University of Bonn); AGU; EGU; FSIN; BiomassNet Dgroup</li>
+    </ul>
+
+    <h2 id="supervision">Theses supervised</h2>
+    <ul class="msm-timeline">
+      <li><span class="t">MSc · 2024</span><span>A robust and scalable crop mapping framework: an advanced machine learning approach integrating optical and SAR imageries</span></li>
+      <li><span class="t">MSc · 2024</span><span>Advancing crop yield forecasting: leveraging AI and remote sensing techniques from pixels to regions — a case study across Germany</span></li>
+      <li><span class="t">MSc · 2023</span><span>Investigating the climatic events affecting the major crop production in Sub-Saharan Africa</span></li>
+      <li><span class="t">PhD · 2023</span><span>Potential of lowland rice and System of Rice Intensification (SRI) in improving food security in Senegal under climate change</span></li>
+      <li><span class="t">PhD · 2022</span><span>Effect of climate change on mixed crop–livestock systems in Ghana</span></li>
+      <li><span class="t">MSc · 2022</span><span>Effect of climate change on mixed crop–livestock systems in the Sudan Savanna of West Africa</span></li>
+      <li><span class="t">MSc project · 2022</span><span>Deep learning for sustainable agriculture</span></li>
+      <li><span class="t">MSc · 2022</span><span>Simulating the impact of climate change on maize production in South Africa and adaptations</span></li>
+      <li><span class="t">MSc · 2020</span><span>Nitrogen balances in extreme crop–livestock farming systems in the Sudan Savanna of Africa</span></li>
+      <li><span class="t">MSc · 2020</span><span>Variability and limitation of cassava (<i>Manihot esculenta</i>) production in Nigeria: potential, water-limited yield gaps</span></li>
+      <li><span class="t">MSc · 2020</span><span>Climate change impact assessment and adaptation strategies in maize yield and biomass — a study in Ecuador</span></li>
+      <li><span class="t">MSc project · 2019</span><span>Temporal evolution of cropland expansion and crop yields in different districts of Mali and Burkina Faso</span></li>
+      <li><span class="t">MSc project · 2019</span><span>Estimation of grassland expansion and grassland productivity in Mali and Burkina Faso</span></li>
+      <li><span class="t">MSc project · 2019</span><span>Characterization of mixed crop–livestock systems in West Africa regarding feed and nutrient balances</span></li>
+      <li><span class="t">MSc · 2018</span><span>A model-based estimation of resource use efficiencies in maize production in Nigeria</span></li>
+      <li><span class="t">MSc · 2016</span><span>Assessing the yield gap and resource use efficiency of maize — a case study in Ghana</span></li>
+      <li><span class="t">MSc · 2015</span><span>The effect of rainfall variability on maize production in Central and Western Ethiopia</span></li>
+    </ul>
+
+    <a class="msm-back" href="../team.html">Back to the team</a>
+  </div>
+</div>
+```

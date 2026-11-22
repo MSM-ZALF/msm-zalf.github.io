@@ -1,0 +1,59 @@
+<!-- msm-footer.html — included after the body via _quarto.yml (after nav-scroll.html).
+     Replaces Quarto's default page footer (hidden in theme.scss).
+     Edit links/text here; it is shared by every page. -->
+<footer class="bb-footer" aria-labelledby="ft-title">
+  <div class="bb-footer-wrap">
+    <div>
+      <h3 id="ft-title">Let's work together.</h3>
+      <p class="bb-ft-sub">Multi-Scale Modelling — a working group of Research Area 4 “Simulation and Data Science” at the Leibniz Centre for Agricultural Landscape Research (ZALF).</p>
+      <a class="bb-ft-mail" href="contact.html" data-local>Get in touch</a>
+      <address style="margin-top:22px;font-style:normal;font-size:.92rem;line-height:1.55;">
+        Leibniz-Zentrum für Agrarlandschaftsforschung (ZALF) e. V.<br>
+        Eberswalder Straße 84 · 15374 Müncheberg · Germany
+      </address>
+    </div>
+    <div class="bb-ft-cols">
+      <nav class="bb-ft-col" aria-label="Site">
+        <h4>Site</h4>
+        <a href="about.html" data-local>About</a>
+        <a href="research.html" data-local>Research</a>
+        <a href="team.html" data-local>Team</a>
+        <a href="projects.html" data-local>Projects</a>
+        <a href="publications.html" data-local>Publications</a>
+        <a href="news.html" data-local>News</a>
+        <a href="jobs.html" data-local>Jobs</a>
+      </nav>
+      <nav class="bb-ft-col" aria-label="ZALF">
+        <h4>ZALF</h4>
+        <a href="https://www.zalf.de/en/struktur/pb4/Pages/Arbeitsgruppen.aspx#x90x">MSM at ZALF</a>
+        <a href="https://www.zalf.de/en/struktur/pb4/Pages/default.aspx">Research Area 4</a>
+        <a href="https://www.zalf.de/en/karriere/Pages/default.aspx">Careers</a>
+        <a href="https://wisskomm.social/@ZALF_leibniz">Mastodon</a>
+        <a href="https://bsky.app/profile/zalf.bsky.social">Bluesky</a>
+        <a href="https://www.linkedin.com/company/zalf-leibniz">LinkedIn</a>
+      </nav>
+    </div>
+  </div>
+  <div class="bb-ft-bottom">
+    <span>© <span id="ft-year">2026</span> Multi-Scale Modelling · ZALF</span>
+    <span><a href="https://www.zalf.de/en/ueber_uns/Pages/impressum.aspx">Legal notice</a> · <a href="https://www.zalf.de/en/ueber_uns/Pages/Datenschutzerklaerung.aspx">Privacy</a> · Made with <a href="https://quarto.org/">Quarto</a></span>
+  </div>
+</footer>
+<script>
+  (function () {
+    var y = document.getElementById('ft-year'); if (y) y.textContent = new Date().getFullYear();
+    // resolve site-relative footer links from any page depth (works on user AND project Pages)
+    var off = document.querySelector('meta[name="quarto:offset"]');
+    var base = off ? off.getAttribute('content') : './';
+    document.querySelectorAll('.bb-footer a[data-local]').forEach(function (a) {
+      a.setAttribute('href', base + a.getAttribute('href'));
+    });
+    // skip link for keyboard users
+    var main = document.querySelector('main') || document.getElementById('quarto-document-content');
+    if (main) {
+      if (!main.id) main.id = 'quarto-document-content';
+      var a = document.createElement('a'); a.className = 'msm-skip'; a.href = '#' + main.id; a.textContent = 'Skip to content';
+      document.body.insertBefore(a, document.body.firstChild);
+    }
+  })();
+</script>

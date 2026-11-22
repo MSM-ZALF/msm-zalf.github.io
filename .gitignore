@@ -1,0 +1,8 @@
+/.quarto/
+**/*.quarto_ipynb
+.Rproj.user/
+.Rhistory
+.DS_Store
+# The site is built by GitHub Actions (gh-pages branch), so the rendered
+# docs/ folder is not committed. Remove this line to commit docs/ instead.
+/docs/

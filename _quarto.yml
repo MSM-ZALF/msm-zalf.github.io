@@ -1,0 +1,72 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - "*.qmd"
+    - "team/*.qmd"
+    - "news/*.qmd"
+  resources:
+    - robots.txt
+    - assets/
+
+website:
+  title: "MSM <span class='brand-2'>· ZALF</span>"
+  site-url: "https://msm-zalf.github.io/"        # <- change to your GitHub Pages URL
+  description: "Multi-Scale Modelling (MSM) working group at the Leibniz Centre for Agricultural Landscape Research (ZALF): hybrid, cross-scale modelling of farm and cropping systems."
+  favicon: assets/favicon.svg
+  page-navigation: false
+  search:
+    location: navbar
+    type: overlay
+  open-graph:
+    locale: en_GB
+    site-name: "Multi-Scale Modelling · ZALF"
+    image: assets/og-image.png
+  twitter-card:
+    card-style: summary_large_image
+    image: assets/og-image.png
+  navbar:
+    toggle-position: right
+    right:
+      - text: "Home"
+        href: index.qmd
+      - text: "About"
+        href: about.qmd
+      - text: "Research"
+        href: research.qmd
+      - text: "Team"
+        href: team.qmd
+      - text: "Projects"
+        href: projects.qmd
+      - text: "Publications"
+        href: publications.qmd
+      - text: "News"
+        href: news.qmd
+      - text: "Jobs"
+        href: jobs.qmd
+      - text: "Contact"
+        href: contact.qmd
+      - text: "<span class='cv-btn'>ZALF {{< fa solid arrow-up-right-from-square >}}</span>"
+        href: "https://www.zalf.de/en/struktur/pb4/Pages/Arbeitsgruppen.aspx#x90x"
+        aria-label: "MSM on the ZALF website"
+
+format:
+  html:
+    lang: en
+    theme:
+      - brand            # pulls in _brand.yml
+      - theme.scss       # component styles
+    css:
+      - css/academicons.css   # Google Scholar / ORCID icons
+    include-in-header:
+      - header.html      # webfonts + meta
+    include-after-body:
+      - nav-scroll.html  # navbar scroll behaviour
+      - msm-footer.html  # custom footer
+    toc: false
+    anchor-sections: false
+    smooth-scroll: true
+    link-external-newwindow: true
+    link-external-icon: false
+    grid:
+      body-width: 1200px

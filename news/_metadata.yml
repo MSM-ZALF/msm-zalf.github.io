@@ -1,0 +1,7 @@
+# Options applied to every news post in this folder.
+# Create a new post: copy any .qmd here, rename it YYYY-MM-DD-short-title.qmd, edit the front matter.
+# Fields: title, description, date (YYYY-MM-DD), categories [..], image (../assets/news/...), image-alt
+page-layout: article
+title-block-banner: false
+date-format: "MMMM YYYY"   # posts are dated to the month
+toc: false

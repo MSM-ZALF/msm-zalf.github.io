@@ -1,0 +1,12 @@
+```{=html}
+<ul class="msm-cards cols-3">
+<% items.forEach(t => { %>
+  <li><a class="msm-card" href="research.html#<%= t.id %>">
+    <span class="ico"><i class="<%= t.icon %>" aria-hidden="true"></i></span>
+    <h3><%= t.title %></h3>
+    <p><%= t.summary %></p>
+    <span class="more">Read more</span>
+  </a></li>
+<% }) %>
+</ul>
+```

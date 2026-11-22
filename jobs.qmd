@@ -1,0 +1,66 @@
+---
+pagetitle: "Jobs · Multi-Scale Modelling (MSM) · ZALF"
+description: "Vacancies, PhD and postdoctoral positions, theses, internships and student jobs in the Multi-Scale Modelling (MSM) working group at ZALF."
+page-layout: full
+listing:
+  - id: Jobs
+    template: ejs/jobs.ejs
+    contents: jobs/jobs.yml
+    sort: false
+---
+
+```{=html}
+<header class="msm-page-head">
+  <div class="bb-eyebrow">Jobs &amp; opportunities</div>
+  <h1>Join<br><span class="ln2">MSM.</span></h1>
+  <p class="msm-lede">Current vacancies, PhD and postdoctoral positions, theses, internships and student jobs. Open positions are listed first; adverts move to “Past opportunities” automatically after their deadline.</p>
+</header>
+```
+
+:::: {.page-section}
+
+::: {#Jobs}
+:::
+
+::::
+
+:::: {.page-section .section-tint}
+
+## Opportunities at ZALF {#zalf}
+
+```{=html}
+<div class="msm-cards">
+  <a class="msm-card" href="https://www.zalf.de/en/karriere/stellenangebote/Pages/default.aspx">
+    <span class="ico"><i class="fa-solid fa-briefcase" aria-hidden="true"></i></span>
+    <h3>ZALF vacancies</h3><p>All current job advertisements of ZALF, including scientific, technical and administrative positions.</p><span class="more">Vacancies portal</span></a>
+  <a class="msm-card" href="https://www.zalf.de/en/karriere/promovierende/Pages/default.aspx">
+    <span class="ico"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></span>
+    <h3>Doctorate at ZALF</h3><p>Information on doing a PhD at ZALF and the support offered to doctoral researchers.</p><span class="more">Doctorate</span></a>
+  <a class="msm-card" href="https://www.zalf.de/en/karriere/abschlussarbeiten-praktika/Pages/default.aspx">
+    <span class="ico"><i class="fa-solid fa-file-pen" aria-hidden="true"></i></span>
+    <h3>Theses &amp; internships</h3><p>Bachelor's and master's theses and internships at ZALF.</p><span class="more">Theses &amp; internships</span></a>
+  <a class="msm-card" href="https://www.zalf.de/en/karriere/Pages/default.aspx">
+    <span class="ico"><i class="fa-solid fa-people-group" aria-hidden="true"></i></span>
+    <h3>Careers at ZALF</h3><p>Working at ZALF: overview of career paths and opportunities.</p><span class="more">Career</span></a>
+</div>
+```
+
+::::
+
+:::: {.page-section}
+
+## Expressions of interest {#interest}
+
+::: {.msm-prose}
+If there is no suitable advertised position, you are welcome to send a short expression of interest — for example for a **master's thesis**, an **internship**, a **student-assistant position**, or to discuss **joint applications for fellowships or third-party funding** (e.g. PhD or postdoctoral fellowships).
+
+We are particularly interested in candidates with a background in one or more of: crop or agroecosystem modelling, machine learning and hybrid modelling, remote sensing and geospatial data science, climate-impact assessment, or farm-system and value-chain analysis.
+
+**Please include** a short motivation (max. one page) stating your topic of interest and preferred start date, a CV, and your transcripts. Send it by email to the scientific contact listed on the [Contact](contact.qmd) page.
+:::
+
+```{=html}
+<p class="msm-note"><strong>Please note:</strong> expressions of interest are not applications for advertised positions — for those, always follow the instructions in the official advert. According to ZALF, theses that are not related to an advertised position cannot be paid by ZALF. Personal data you send are processed in accordance with the <a href="https://www.zalf.de/en/ueber_uns/Pages/Datenschutzerklaerung.aspx">ZALF privacy policy</a>.</p>
+```
+
+::::

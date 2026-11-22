@@ -1,0 +1,39 @@
+---
+pagetitle: "Team · Multi-Scale Modelling (MSM) · ZALF"
+description: "People of the Multi-Scale Modelling (MSM) working group at ZALF — group lead, scientists, PhD students and student researchers."
+page-layout: full
+listing:
+  - id: Team
+    template: ejs/team.ejs
+    contents: team/members.yml
+    sort: false
+---
+
+```{=html}
+<header class="msm-page-head">
+  <div class="bb-eyebrow">Team</div>
+  <h1>The people<br><span class="ln2">behind MSM.</span></h1>
+  <p class="msm-lede">The people of the Multi-Scale Modelling working group in Research Area 4 “Simulation and Data Science” at ZALF.</p>
+</header>
+```
+
+:::: {.page-section}
+
+::: {#Team}
+:::
+
+```{=html}
+<section class="team-group" aria-label="Join the team">
+  <h3>Join us</h3>
+  <div class="team-grid">
+    <a class="member member-join" href="jobs.html" style="color:inherit">
+      <div class="ph"><i class="fa-solid fa-user-plus" aria-hidden="true"></i></div>
+      <h4 class="nm">Your name here?</h4>
+      <div class="rl">See current vacancies, thesis topics and how to express interest.</div>
+    </a>
+  </div>
+</section>
+<p class="msm-note">The complete, current staff list of the working group is maintained in the <a href="https://www.zalf.de/en/ueber_uns/mitarbeiter/Pages/default_ag.aspx?idxs=x90x">ZALF staff directory</a>.</p>
+```
+
+::::

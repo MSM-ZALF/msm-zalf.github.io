@@ -1,0 +1,151 @@
+---
+pagetitle: "Multi-Scale Modelling (MSM) · ZALF"
+description: "The Multi-Scale Modelling working group at ZALF develops hybrid, cross-scale models of farm and cropping systems — from fields to markets — combining process-based models with AI."
+page-layout: full
+toc: false
+listing:
+  - id: Themes
+    template: ejs/research_cards.ejs
+    contents: research/themes.yml
+    sort: false
+  - id: Projects
+    template: ejs/projects_home.ejs
+    contents: projects/projects.yml
+    sort: false
+  - id: Recent-publications
+    template: ejs/publication_yearly_home.ejs
+    contents: publications/journal-articles.yml
+    sort: false
+    max-items: 4
+  - id: News
+    contents: news/*.qmd
+    sort: "date desc"
+    type: grid
+    grid-columns: 3
+    max-items: 3
+    date-format: "MMM YYYY"
+    fields: [image, date, title, description, categories]
+---
+
+```{=html}
+<section class="bb-hero" aria-label="Introduction">
+  <div class="bb-hero-left">
+    <div class="bb-eyebrow">Leibniz Centre for Agricultural Landscape Research</div>
+    <h1 class="bb-name">Multi-Scale<br><span class="ln2">Modelling.</span></h1>
+    <p class="bb-role">A working group of Research Area 4 <a href="https://www.zalf.de/en/struktur/pb4/Pages/default.aspx">Simulation and Data Science</a><span class="at">, at ZALF.</span></p>
+    <p class="bb-intro">We model farm systems across scales — fields, farms, landscapes, regions and markets — and combine process-based models with data-driven AI to forecast and evaluate the effects of climate, market and policy change on cropping systems.</p>
+    <div class="msm-cta">
+      <a class="msm-btn" href="research.html">Our research</a>
+      <a class="msm-btn ghost" href="publications.html">Publications</a>
+      <a class="msm-btn ghost" href="jobs.html">Join us</a>
+    </div>
+  </div>
+  <div class="bb-hero-right">
+    <div class="bb-portrait-wrap">
+      <div class="bb-portrait-glow"></div>
+      <div class="bb-portrait-ring"></div>
+      <div class="bb-portrait msm-scales">
+        <svg viewBox="0 0 400 400" role="img" aria-labelledby="scales-t scales-d">
+          <title id="scales-t">Scales modelled by MSM</title>
+          <desc id="scales-d">Nested circles from field at the centre to farm, landscape, region and market at the outside.</desc>
+          <circle cx="200" cy="200" r="190" fill="#C9A188" opacity=".22"/>
+          <circle cx="200" cy="200" r="152" fill="#233827" opacity=".16"/>
+          <circle cx="200" cy="200" r="114" fill="#36513C" opacity=".20"/>
+          <circle cx="200" cy="200" r="76"  fill="#6E7350" opacity=".30"/>
+          <circle cx="200" cy="200" r="40"  fill="#97A083"/>
+          <g class="ring" stroke="#2B2620" stroke-opacity=".22">
+            <circle cx="200" cy="200" r="190"/><circle cx="200" cy="200" r="152"/>
+            <circle cx="200" cy="200" r="114"/><circle cx="200" cy="200" r="76"/>
+          </g>
+          <g fill="#2B2620" text-anchor="middle">
+            <text x="200" y="205" font-size="15">Field</text>
+            <text x="200" y="146" font-size="14">Farm</text>
+            <text x="200" y="108" font-size="14">Landscape</text>
+            <text x="200" y="70"  font-size="14">Region</text>
+            <text x="200" y="32"  font-size="14" fill="#8E3F1E">Market</text>
+          </g>
+          <g fill="#BC5C32">
+            <circle cx="268" cy="232" r="4"/><circle cx="118" cy="272" r="4"/><circle cx="300" cy="120" r="4"/>
+            <circle cx="96" cy="150" r="3"/><circle cx="330" cy="268" r="3"/>
+          </g>
+          <path d="M268 232 L 300 120 M268 232 L118 272 M118 272 L96 150" stroke="#BC5C32" stroke-width="1.4" stroke-dasharray="2 6" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+    <svg class="bb-squiggle" viewBox="0 0 240 130" width="240" height="130" fill="none" aria-hidden="true">
+      <path d="M6 96 C 40 120, 70 60, 110 70 S 180 110, 224 40" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="2 11"/>
+      <path d="M224 40 l -14 2 m 14 -2 l -4 -13" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+    </svg>
+  </div>
+</section>
+```
+
+:::: {.page-section}
+
+```{=html}
+<div class="section-head">
+  <h2 id="research">Research focus</h2>
+  <a class="section-more" href="research.html">All research themes</a>
+</div>
+```
+
+::: {#Themes}
+:::
+
+::::
+
+:::: {.page-section .section-tint}
+
+```{=html}
+<div class="section-head">
+  <h2 id="projects">Current projects</h2>
+  <a class="section-more" href="projects.html">All projects</a>
+</div>
+```
+
+::: {#Projects}
+:::
+
+::::
+
+:::: {.page-section .publications-section}
+
+```{=html}
+<div class="section-head">
+  <h2 id="publications">Recent publications</h2>
+  <a class="section-more" href="publications.html">All publications</a>
+</div>
+```
+
+::: {#Recent-publications}
+:::
+
+::::
+
+:::: {.page-section .section-tint}
+
+```{=html}
+<div class="section-head">
+  <h2 id="news">News</h2>
+  <a class="section-more" href="news.html">All news</a>
+</div>
+```
+
+::: {#News}
+:::
+
+::::
+
+:::: {.page-section}
+
+```{=html}
+<div class="msm-band">
+  <div>
+    <h2>Work with us</h2>
+    <p>We welcome students and researchers interested in crop and farm-system modelling, hybrid AI–process modelling and Earth observation for agriculture.</p>
+  </div>
+  <a class="msm-btn" href="jobs.html">Jobs &amp; opportunities</a>
+</div>
+```
+
+::::
