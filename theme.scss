@@ -1023,3 +1023,137 @@ a.msm-card.has-img:hover .card-img img { transform: scale(1.04); }
 .focus-cards, .msm-cards.cols-3 { grid-auto-rows: 1fr; }   /* every card in the grid gets the same height */
 .status.approved { background: color-mix(in srgb, var(--bb-burnt-text) 12%, transparent); color: var(--bb-burnt-text); }
 .status.starting { background: color-mix(in srgb, var(--bb-accent) 18%, transparent); color: var(--bb-primary); }
+
+/* ==========================================================
+   GLASS BUTTONS — frosted, translucent finish for every button
+   (navbar ZALF pill, hero/CTA .msm-btn + .ghost, CTA band,
+   publication pills, filter + type-chip buttons).
+   Tokens below tune the whole effect in one place.
+   ========================================================== */
+:root {
+  --glass-blur: blur(14px) saturate(170%);
+  --glass-edge: rgba(255,255,255,.55);                        /* bright rim */
+  --glass-highlight: inset 0 1px 0 rgba(255,255,255,.65),     /* top specular line */
+                     inset 0 -1px 0 rgba(0,0,0,.06);
+  --glass-shadow: 0 4px 14px -4px rgba(30,63,28,.28);
+  --glass-shadow-hover: 0 10px 24px -8px rgba(30,63,28,.38);
+  --glass-tint: color-mix(in srgb, var(--bb-primary) 78%, transparent);
+  --glass-tint-deep: color-mix(in srgb, var(--bb-primary-deep) 86%, transparent);
+  --glass-clear: rgba(255,255,255,.45);
+}
+
+/* shared frosted base + sheen layer */
+.msm-btn, #quarto-document-content a.msm-btn,
+.navbar .nav-link .cv-btn,
+.tagpill, .pub .links .btn,
+.btn-outline-dark.btn-sm, a.btn-outline-dark,
+.pub-filter button,
+.pub-type-chips button {
+  position: relative; overflow: hidden; isolation: isolate;
+  -webkit-backdrop-filter: var(--glass-blur); backdrop-filter: var(--glass-blur);
+  transition: background .3s ease, color .25s ease, border-color .25s ease,
+              box-shadow .3s ease, transform .2s ease !important;
+}
+.msm-btn::before, #quarto-document-content a.msm-btn::before,
+.navbar .nav-link .cv-btn::before,
+.tagpill::before, .pub .links .btn::before,
+.btn-outline-dark.btn-sm::before, a.btn-outline-dark::before,
+.pub-filter button::before,
+.pub-type-chips button::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  border-radius: inherit;
+  /* soft glossy top half + diagonal sheen that slides across on hover */
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.32) 0%, rgba(255,255,255,.06) 48%, transparent 52%),
+    linear-gradient(115deg, transparent 30%, rgba(255,255,255,.45) 50%, transparent 70%) -160% 0 / 60% 100% no-repeat;
+  transition: background-position .7s ease;
+}
+.msm-btn:hover::before, #quarto-document-content a.msm-btn:hover::before,
+.navbar .nav-link:hover .cv-btn::before,
+.tagpill:hover::before, .pub .links .btn:hover::before,
+.btn-outline-dark.btn-sm:hover::before, a.btn-outline-dark:hover::before,
+.pub-filter button:hover::before,
+.pub-type-chips button:hover::before {
+  background-position: 0 0, 260% 0;
+}
+
+/* ---- filled glass (primary actions) ---- */
+.msm-btn, #quarto-document-content a.msm-btn,
+.navbar .nav-link .cv-btn {
+  background: var(--glass-tint);
+  border: 1px solid var(--glass-edge);
+  box-shadow: var(--glass-highlight), var(--glass-shadow);
+  text-shadow: 0 1px 1px rgba(0,0,0,.15);
+}
+.msm-btn:hover, #quarto-document-content a.msm-btn:hover,
+.navbar .nav-link:hover .cv-btn {
+  background: var(--glass-tint-deep);
+  border-color: rgba(255,255,255,.7);
+  box-shadow: var(--glass-highlight), var(--glass-shadow-hover);
+  transform: translateY(-2px);
+}
+
+/* ---- clear glass (secondary / ghost / pills) ---- */
+.msm-btn.ghost, #quarto-document-content a.msm-btn.ghost {
+  background: var(--glass-clear);
+  color: var(--bb-primary);
+  border: 1px solid color-mix(in srgb, var(--bb-primary) 30%, rgba(255,255,255,.6));
+  text-shadow: none;
+}
+.msm-btn.ghost:hover, #quarto-document-content a.msm-btn.ghost:hover {
+  background: var(--glass-tint); color: #fff; border-color: var(--glass-edge);
+}
+
+.tagpill, .pub .links .btn,
+.btn-outline-dark.btn-sm, a.btn-outline-dark,
+.pub-filter button {
+  background: var(--glass-clear) !important;
+  border: 1px solid color-mix(in srgb, var(--bb-ink) 12%, rgba(255,255,255,.7)) !important;
+  box-shadow: var(--glass-highlight), 0 2px 8px -3px rgba(0,0,0,.12);
+}
+.tagpill:hover, .pub .links .btn:hover,
+.btn-outline-dark.btn-sm:hover, a.btn-outline-dark:hover,
+.pub-filter button:hover,
+.tagpill-summary[aria-expanded="true"] {
+  background: var(--glass-tint) !important;
+  border-color: var(--glass-edge) !important;
+  color: #fff !important;
+  box-shadow: var(--glass-highlight), var(--glass-shadow);
+  transform: translateY(-1px);
+}
+.tagpill-summary { border-color: color-mix(in srgb, var(--bb-primary) 30%, rgba(255,255,255,.6)) !important; }
+
+.pub-type-chips button {
+  background: color-mix(in srgb, var(--bb-primary) 9%, rgba(255,255,255,.5));
+  border: 1px solid color-mix(in srgb, var(--bb-primary) 18%, rgba(255,255,255,.6));
+  box-shadow: var(--glass-highlight);
+}
+.pub-type-chips button:hover { transform: translateY(-1px); box-shadow: var(--glass-highlight), 0 4px 10px -4px rgba(30,63,28,.25); }
+.pub-type-chips button[aria-pressed="true"] {
+  background: var(--glass-tint); color: #fff; border-color: var(--glass-edge);
+  box-shadow: var(--glass-highlight), var(--glass-shadow);
+}
+
+/* ---- glass on the dark forest CTA band: light frosted panel ---- */
+.msm-band .msm-btn, #quarto-document-content .msm-band a.msm-btn {
+  background: rgba(255,255,255,.14);
+  border-color: rgba(255,255,255,.35);
+  color: #fff;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 6px 18px -6px rgba(0,0,0,.45);
+}
+.msm-band .msm-btn:hover, #quarto-document-content .msm-band a.msm-btn:hover {
+  background: rgba(255,255,255,.26); border-color: rgba(255,255,255,.6); color: #fff;
+}
+
+/* press feedback */
+.msm-btn:active, .navbar .nav-link:active .cv-btn, .tagpill:active, .pub .links .btn:active,
+.pub-filter button:active, .pub-type-chips button:active { transform: translateY(0) scale(.98); }
+
+/* fallback where backdrop-filter is unsupported: slightly more opaque */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  :root { --glass-tint: var(--bb-primary); --glass-clear: rgba(255,255,255,.85); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .msm-btn::before, .navbar .nav-link .cv-btn::before, .tagpill::before, .pub .links .btn::before,
+  .pub-filter button::before, .pub-type-chips button::before { transition: none; }
+}
