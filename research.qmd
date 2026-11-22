@@ -11,7 +11,6 @@ listing:
     template: ejs/pub_stats.ejs
     contents:
       - publications/journal-articles.yml
-      - publications/conference-contributions.yml
     sort: false
 ---
 
@@ -94,7 +93,7 @@ listing:
 ## Scientific contributions {#contributions}
 
 ::: {.msm-prose}
-Group members have contributed to a broad body of peer-reviewed work on crop and cropping-system modelling, climate-impact assessment, hybrid modelling and Earth observation, including large international model-intercomparison studies.
+Since joining ZALF, group members have published peer-reviewed work on crop and cropping-system modelling, climate-impact assessment, hybrid modelling and Earth observation, including large international model-intercomparison studies.
 :::
 
 ::: {#Pub-stats}

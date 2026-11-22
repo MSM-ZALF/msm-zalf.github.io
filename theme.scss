@@ -980,7 +980,7 @@ table.proj-table > caption { position: absolute; width: 1px; height: 1px; overfl
 footer.bb-footer, .quarto-container footer.bb-footer { padding: 88px 0 36px !important; }
 
 /* ---------- publication rows: grey background on hover ---------- */
-.pub:hover { background: var(--bb-sand) !important; border-radius: 12px; }
+.pub:hover { background: var(--bb-sand) !important; border-radius: 0; }
 .pub:hover + .pub { border-top-color: transparent; }
 
 /* ---------- equal-height cards (research focus, tools, …) ---------- */
@@ -1021,3 +1021,5 @@ a.msm-card.has-img:hover .card-img img { transform: scale(1.04); }
 .tool .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 4px; }
 .tool-card .tool-logo.sm { margin-bottom: 4px; }
 .focus-cards, .msm-cards.cols-3 { grid-auto-rows: 1fr; }   /* every card in the grid gets the same height */
+.status.approved { background: color-mix(in srgb, var(--bb-burnt-text) 12%, transparent); color: var(--bb-burnt-text); }
+.status.starting { background: color-mix(in srgb, var(--bb-accent) 18%, transparent); color: var(--bb-primary); }

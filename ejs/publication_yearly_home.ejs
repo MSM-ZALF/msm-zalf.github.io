@@ -3,7 +3,7 @@
   // Compact publication rows for the home page (no filters).
   // Group members' names are highlighted (the regex needs ONE capture group so split() keeps the matches) — keep this list in sync with
   // MEMBER_NAMES in ejs/publication_filter.ejs.
-  const MEMBER_NAMES = /(Srivastava, A\.(?:\s?K\.?)?|Ewert, F\.)/g;
+  const MEMBER_NAMES = /(Srivastava, A\.(?:\s?K\.?)?|Ewert, F\.|Pires Barbosa, L\.A\.)/g;
   let sorted = items.slice().sort((a, b) => {
     let ya = String(a.year || ''); let yb = String(b.year || '');
     let ra = ya.toLowerCase() === 'in review'; let rb = yb.toLowerCase() === 'in review';

@@ -1,14 +1,12 @@
 ---
 pagetitle: "Publications"
-description: "Peer-reviewed journal articles, books, reports and conference contributions by members of the Multi-Scale Modelling (MSM) working group at ZALF, with DOI links and filters."
+description: "Published peer-reviewed papers of the Multi-Scale Modelling (MSM) working group at ZALF, with DOI links, search and filters."
 page-layout: full
 listing:
   - id: Publications
     template: ejs/publication_filter.ejs
     contents:
       - publications/journal-articles.yml
-      - publications/books-reports.yml
-      - publications/conference-contributions.yml
     sort: false
 ---
 
@@ -16,7 +14,7 @@ listing:
 <header class="msm-page-head">
   <div class="bb-eyebrow">Publications</div>
   <h1>Scientific<br><span class="ln2">output.</span></h1>
-  <p class="msm-lede">Journal articles, books, reports and conference contributions by group members. Search by keyword, author or journal, or filter by year and type. Names of group members are highlighted.</p>
+  <p class="msm-lede">Published peer-reviewed papers of the group since joining ZALF. Search by keyword, author or journal, or filter by year. Names of group members are highlighted.</p>
 </header>
 ```
 

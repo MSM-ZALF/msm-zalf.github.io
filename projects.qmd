@@ -1,6 +1,6 @@
 ---
 pagetitle: "Projects"
-description: "Ongoing and completed research projects, collaborations and third-party funding of the Multi-Scale Modelling (MSM) working group at ZALF."
+description: "Approved third-party funded research projects of the Multi-Scale Modelling (MSM) working group at ZALF."
 page-layout: full
 listing:
   - id: Projects
@@ -13,7 +13,7 @@ listing:
 <header class="msm-page-head">
   <div class="bb-eyebrow">Projects</div>
   <h1>Research projects<br><span class="ln2">&amp; funding.</span></h1>
-  <p class="msm-lede">Third-party funded projects with national and international partners — from the EU, BMBF, DFG, UKRI and the Leibniz Association to the African Union. Project status updates automatically from each project's end date.</p>
+  <p class="msm-lede">Approved third-party funded projects with national and international partners — funded by Horizon Europe, BMBF, DST, DFG, DWIH/DAAD and ZALF's IAT Flex Fund. Project status updates automatically from each project's dates.</p>
 </header>
 ```
 

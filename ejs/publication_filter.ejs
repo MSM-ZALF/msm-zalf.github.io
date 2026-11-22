@@ -3,7 +3,7 @@
   // Full publication list with client-side filtering (search · year · type).
   // Data: publications/*.yml — each entry has a `type` (article | book | conference).
   // Group members' names are highlighted (the regex needs ONE capture group so split() keeps the matches); extend MEMBER_NAMES when people join.
-  const MEMBER_NAMES = /(Srivastava, A\.(?:\s?K\.?)?|Ewert, F\.)/g;
+  const MEMBER_NAMES = /(Srivastava, A\.(?:\s?K\.?)?|Ewert, F\.|Pires Barbosa, L\.A\.)/g;
   const TYPE_LABEL = { article: 'Journal article', book: 'Book / chapter / report', conference: 'Conference contribution' };
   const TYPE_ORDER = ['article', 'book', 'conference'];
   let sorted = items.slice().sort((a, b) => {
@@ -26,7 +26,7 @@
     <select id="pf-year"><option value="">All years</option>
       <% years.forEach(y => { %><option value="<%= y %>"><%= y %></option><% }) %>
     </select></div>
-  <div><label for="pf-type">Type</label>
+  <div<%- Object.keys(counts).length < 2 ? ' hidden' : '' %>><label for="pf-type">Type</label>
     <select id="pf-type"><option value="">All types</option>
       <% TYPE_ORDER.forEach(t => { if (counts[t]) { %><option value="<%= t %>"><%= TYPE_LABEL[t] %> (<%= counts[t] %>)</option><% } }) %>
     </select></div>

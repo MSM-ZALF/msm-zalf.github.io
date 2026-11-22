@@ -1,16 +1,15 @@
 ```{=html}
 <%
-  // Summary figures computed from publications/*.yml (updates automatically).
+  // Summary figures computed from publications/journal-articles.yml (updates automatically).
   const arts = items.filter(i => i.type === 'article');
   const years = arts.map(i => parseInt(i.year)).filter(n => !isNaN(n));
   const since = Math.min(...years), last = Math.max(...years);
-  const recent = arts.filter(i => parseInt(i.year) >= last - 2).length;
+  const inLast = arts.filter(i => parseInt(i.year) === last).length;
   const journals = new Set(arts.map(i => String(i.journal || '').toLowerCase().trim()).filter(Boolean)).size;
 %>
 <div class="msm-stats">
-  <div class="msm-stat"><div class="n"><%= arts.length %></div><div class="l">peer-reviewed articles (<%= since %>–<%= last %>)</div></div>
-  <div class="msm-stat"><div class="n"><%= recent %></div><div class="l">articles since <%= last - 2 %></div></div>
+  <div class="msm-stat"><div class="n"><%= arts.length %></div><div class="l">published papers (<%= since %>–<%= last %>)</div></div>
+  <div class="msm-stat"><div class="n"><%= inLast %></div><div class="l">papers in <%= last %></div></div>
   <div class="msm-stat"><div class="n"><%= journals %></div><div class="l">different journals</div></div>
-  <div class="msm-stat"><div class="n"><%= items.filter(i => i.type === 'conference').length %></div><div class="l">conference contributions</div></div>
 </div>
 ```

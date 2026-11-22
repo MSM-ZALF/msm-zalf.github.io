@@ -1,85 +1,62 @@
 ```{=html}
 <%
-  // Projects page: ongoing projects as cards, completed projects as a table,
-  // long-term networks as cards. Status is derived from `end` (YYYY-MM | YYYY | present).
+  // Projects page — approved projects only (see projects/projects.yml).
+  // Status: Starting (start in future) · Ongoing · Completed (end passed) · Approved (no dates)
   const now = new Date();
-  const endDate = e => {
-    if (!e || String(e).toLowerCase() === 'present') return null;
-    const [y, m] = String(e).split('-').map(Number);
-    return m ? new Date(y, m, 0, 23, 59) : new Date(y, 11, 31, 23, 59);   // last day of month / year
+  const toDate = (v, endOfPeriod) => {
+    if (!v || String(v).toLowerCase() === 'present') return null;
+    const [y, m] = String(v).split('-').map(Number);
+    return endOfPeriod ? (m ? new Date(y, m, 0, 23, 59) : new Date(y, 11, 31, 23, 59)) : new Date(y, (m || 1) - 1, 1);
   };
-  const fmt = d => { if (!d) return ''; if (String(d).toLowerCase() === 'present') return 'present';
-                     const [y, m] = String(d).split('-'); return m ? m + '/' + y : y; };
+  const fmt = d => { if (!d) return ''; const [y, m] = String(d).split('-'); return m ? m + '/' + y : y; };
   const span = p => { const a = fmt(p.start), b = fmt(p.end); return (a && b && a !== b) ? a + ' – ' + b : (a || b); };
-  const isOngoing = p => { const e = endDate(p.end); return e === null || e >= now; };
-  const projects = items.filter(p => (p.kind || 'project') === 'project');
-  const networks = items.filter(p => p.kind === 'network');
-  const ongoing = projects.filter(isOngoing);
-  const completed = projects.filter(p => !isOngoing(p))
-                            .sort((a, b) => (endDate(b.end) || 0) - (endDate(a.end) || 0));
+  const status = p => {
+    const s = toDate(p.start, false), e = toDate(p.end, true);
+    if (!s && !e) return ['approved', 'Approved'];
+    if (s && s > now) return ['starting', 'Starting ' + fmt(p.start)];
+    if (e && e < now) return ['completed', 'Completed'];
+    return ['ongoing', 'Ongoing'];
+  };
+  const rank = { ongoing: 0, starting: 1, approved: 2, completed: 3 };
+  const list = items.slice().sort((a, b) => rank[status(a)[0]] - rank[status(b)[0]] || ((toDate(b.start) || 0) - (toDate(a.start) || 0)));
+  const eur = n => (typeof n === 'number' || /^\d+(\.\d+)?$/.test(String(n))) ? '€' + Math.round(Number(n)).toLocaleString('en-GB') : String(n || '');
 %>
-<div class="section-head"><h2 id="ongoing">Ongoing projects</h2></div>
+<div class="msm-stats" style="margin:0 0 2.4rem">
+  <div class="msm-stat"><div class="n"><%= items.length %></div><div class="l">approved projects</div></div>
+  <div class="msm-stat"><div class="n"><%= list.filter(p => status(p)[0] === 'ongoing').length %></div><div class="l">currently running</div></div>
+</div>
 <div class="proj-grid">
-<% ongoing.forEach(p => { %>
-  <article class="proj" data-end="<%= p.end %>">
-    <div class="top"><h3 class="acr"><%= p.acronym %></h3><span class="status ongoing">Ongoing</span></div>
+<% list.forEach(p => { const st = status(p); %>
+  <article class="proj" data-start="<%= p.start || '' %>" data-end="<%= p.end || '' %>">
+    <div class="top"><h3 class="acr"><%= p.acronym %></h3><span class="status <%= st[0] %>"><%= st[1] %></span></div>
     <p class="ttl"><%= p.title %></p>
     <dl>
       <% if (span(p)) { %><dt>Duration</dt><dd><%= span(p) %></dd><% } %>
       <% if (p.funder) { %><dt>Funder</dt><dd><%= p.funder %></dd><% } %>
+      <% if (p.call) { %><dt>Call</dt><dd><%= p.call %></dd><% } %>
+      <% if (p.partners) { %><dt>Consortium</dt><dd><%= p.partners %></dd><% } %>
       <% if (p.role) { %><dt>MSM role</dt><dd><%= p.role %></dd><% } %>
-      <% if (p.funding) { %><dt>Acquired</dt><dd><%= p.funding %></dd><% } %>
+      <% if (p.positions) { %><dt>Positions</dt><dd><%= p.positions %></dd><% } %>
+      <% if (p.funding) { %><dt>Funding</dt><dd><%= eur(p.funding) %></dd><% } %>
     </dl>
     <% if (p.url) { %><div class="links"><a class="tagpill" href="<%- p.url %>">Project website</a></div><% } %>
   </article>
 <% }) %>
 </div>
-
-<div class="section-head" style="margin-top:4rem"><h2 id="networks">Collaborations &amp; networks</h2></div>
-<div class="proj-grid">
-<% networks.forEach(p => { %>
-  <article class="proj">
-    <div class="top"><h3 class="acr"><%= p.acronym %></h3><% if (span(p)) { %><span class="status ongoing"><%= span(p) %></span><% } %></div>
-    <p class="ttl"><%= p.title %></p>
-    <dl>
-      <% if (p.funder) { %><dt>Context</dt><dd><%= p.funder %></dd><% } %>
-      <% if (p.role) { %><dt>MSM role</dt><dd><%= p.role %></dd><% } %>
-    </dl>
-    <% if (p.url) { %><div class="links"><a class="tagpill" href="<%- p.url %>">Website</a></div><% } %>
-  </article>
-<% }) %>
-</div>
-
-<div class="section-head" style="margin-top:4rem"><h2 id="completed">Completed projects</h2></div>
-<p class="msm-prose" style="margin-top:-1rem">Includes projects that group members led or contributed to before joining ZALF (University of Bonn; European Commission Joint Research Centre).</p>
-<div class="proj-table-wrap">
-<table class="proj-table">
-  <caption class="visually-hidden">Completed projects with duration, funder, role and acquired funding</caption>
-  <thead><tr><th scope="col">Project</th><th scope="col">Duration</th><th scope="col">Funder</th><th scope="col">Role</th><th scope="col">Acquired</th></tr></thead>
-  <tbody>
-  <% completed.forEach(p => { %>
-    <tr>
-      <td class="acr"><% if (p.url) { %><a href="<%- p.url %>"><%= p.acronym %></a><% } else { %><%= p.acronym %><% } %><div class="ttl" style="font-weight:400;white-space:normal;max-width:46ch"><%= p.title %></div></td>
-      <td class="when"><%= span(p) %></td>
-      <td><%= p.funder || '' %></td>
-      <td><%= p.role || '' %></td>
-      <td><%= p.funding || '' %></td>
-    </tr>
-  <% }) %>
-  </tbody>
-</table>
-</div>
-<p class="msm-note">Acquired funding is shown as stated in the project records (currency given where specified).</p>
+<p class="msm-note">Funding: third-party funds acquired for MSM in each project (EUR). Only approved projects are listed.</p>
 ```
 
 <script>
-  // Re-check status in the browser so a project whose end date has passed since the last build is labelled correctly.
+  // Re-check status in the visitor's browser so labels stay correct between weekly rebuilds.
   (function () {
     var now = new Date();
+    function d(v, end) { if (!v) return null; var p = v.split('-').map(Number);
+      return end ? (p[1] ? new Date(p[0], p[1], 0, 23, 59) : new Date(p[0], 11, 31, 23, 59)) : new Date(p[0], (p[1] || 1) - 1, 1); }
     document.querySelectorAll('.proj[data-end]').forEach(function (el) {
-      var e = el.dataset.end; if (!e || e === 'present') return;
-      var p = e.split('-').map(Number), d = p[1] ? new Date(p[0], p[1], 0, 23, 59) : new Date(p[0], 11, 31, 23, 59);
-      if (d < now) { var s = el.querySelector('.status'); if (s) { s.textContent = 'Completed'; s.className = 'status completed'; } }
+      var s = d(el.dataset.start, false), e = d(el.dataset.end, true), b = el.querySelector('.status');
+      if (!b || (!s && !e)) return;
+      if (e && e < now) { b.textContent = 'Completed'; b.className = 'status completed'; }
+      else if (s && s <= now && b.classList.contains('starting')) { b.textContent = 'Ongoing'; b.className = 'status ongoing'; }
     });
   })();
 </script>

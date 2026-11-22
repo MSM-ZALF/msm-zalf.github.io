@@ -1,236 +1,99 @@
 # =====================================================================
-#  Research projects  —  rendered by ejs/projects.ejs
+#  Approved research projects  —  rendered by ejs/projects.ejs (projects page)
+#  and ejs/projects_home.ejs (home page, `featured: true`).
 #
-#  Status is computed automatically from `end` (YYYY-MM):
-#    end in the future or "present"  → Ongoing
-#    end in the past                 → Completed
-#  (evaluated at build time AND again in the visitor's browser).
+#  Source: documents/msm/Projects_3rdParty_Funding_Status.xlsx — ONLY rows
+#  with status "Proposal Approved" are listed here (submitted, rejected and
+#  in-preparation proposals are not shown). Durations and the project website
+#  come from the CV where the spreadsheet has none.
 #
-#  Fields
-#    acronym, title, url
-#    funder        funding body / programme
-#    start, end    "YYYY-MM" (or "YYYY"); end may be "present"
-#    role          role of the MSM member in the project
-#    funding       acquired third-party funding (as stated in the source)
-#    kind          "project" (default) or "network" (long-term initiatives/collaborations)
-#    featured      true → shown on the home page while ongoing
+#  Status shown on the site is computed automatically:
+#    start in the future → Starting · end in the past → Completed
+#    otherwise → Ongoing · no dates → Approved
 #
-#  Source: "Projects undertaken" and "Acquired third-party funding projects"
-#  in the CV in documents/msm. Projects before 05/2024 were carried out by
-#  group members at previous institutions (University of Bonn, EC-JRC).
+#  Fields: acronym, title, call, funder, partners, role, positions,
+#          funding (EUR, as number), start/end ("YYYY-MM" or "YYYY"), url, featured
 # =====================================================================
 
-# ---------- current (ZALF era) ----------
-- acronym: "VOBO"
-  title: "VOBO — IAT Flex-Fund project (ZALF)"
-  funder: "Flex Fund (ZALF), Innovation Centre for Agricultural System Transformation (IAT)"
-  start: "2026-07"
-  end: "2027-06"
-  role: "Work Package Leader"
-  funding: "41,311"
-  featured: true
-
-- acronym: "SUSTAINCrop"
-  title: "SUSTAINCrop — EU Horizon project"
-  funder: "European Union (Horizon Europe)"
+- acronym: "SUSTAIN-Crop"
+  title: "Environmental sustainability criteria for primary agricultural crops for industrial bio-based systems"
+  call: "HORIZON-CL6-2025-01-ZEROPOLLUTION-02"
+  funder: "European Union — Horizon Europe"
+  partners: "Coordinator: INNOMINE (Hungary)"
+  role: "Work Package Leader / PI"
+  positions: "1 PhD (3 years)"
+  funding: 252650
   start: "2026-04"
   end: "2029-03"
-  role: "Principal Investigator"
-  funding: "252,650"
   featured: true
 
 - acronym: "PARAM-VC"
   title: "Promoting Agricultural Resilience with AI-based Modeling and Value Chain Analysis"
-  funder: "BMBF (Federal Ministry of Education and Research) + DST"
+  funder: "DST + BMBF"
+  partners: "Coordinator: ZALF · Partners: PHENO-INSPECT, IIT Kharagpur, Leads Connect"
+  role: "Coordinator / PI"
+  positions: "1 PhD (3 years)"
+  funding: 247344
   start: "2025-05"
   end: "2028-04"
-  role: "Coordinator & Principal Investigator"
-  funding: "246,000"
   featured: true
 
 - acronym: "AGRECO4CAST"
   title: "Supporting Agroecological Transitions of Agroforestry Landscapes using an Innovative Transdisciplinary Assessment Framework"
-  funder: "BMBF (Federal Ministry of Education and Research)"
+  call: "Agroecology — “Fostering agroecology at farm and landscape levels”"
+  funder: "BMBF"
+  partners: "Coordinator: ZALF · Partners from Spain, Italy, Denmark and the Netherlands"
+  role: "Work Package Leader / PI"
+  positions: "1 PhD (3 years)"
+  funding: 106055
   start: "2025-05"
   end: "2028-04"
-  role: "Principal Investigator"
-  funding: "160,000"
   url: "https://www.agroecologypartnership.eu/agreco4cast"
   featured: true
 
-- acronym: "LL-SYSTAIN"
-  title: "Leibniz-Lab “Systemic Sustainability”"
-  funder: "Leibniz Association"
-  start: "2024-04"
-  end: "2027-03"
-  role: "Co-Coordinator & Principal Investigator"
-  funding: "€419,737"
-  url: "https://www.ll-systain.org/"
+- acronym: "VOBO"
+  title: "Vorsorgender Bodenerosionsschutz auf landwirtschaftlichen Flächen in der Ostbrandenburger Ackerbauregion (Precautionary soil-erosion protection on agricultural land in the East Brandenburg arable region)"
+  funder: "IAT Flex Fund (ZALF)"
+  role: "Work Package Leader"
+  funding: 41311
+  start: "2026-07"
+  end: "2027-06"
   featured: true
 
-- acronym: "NextGen-Expert"
-  title: "Next-Generation Environmental and eXtended Tools for Extreme Events & Plant Resilience Assessment"
-  funder: "Deutsche Forschungsgemeinschaft (DFG) — FAIRagro"
+- acronym: "NBM-SPP-CC"
+  title: "Neue Geschäftsmodelle für nachhaltigen Pflanzenschutz im Getreideanbau (New business models for sustainable plant protection in cereal production)"
+  partners: "Lead applicant: Bodensee-Stiftung · Partners: ZALF, University of Bonn, EDEKA ZENTRALE Stiftung & Co. KG"
+  role: "Work Package Leader"
+  positions: "1 postdoc"
+  funding: 82800
+
+- acronym: "SAFE-GH"
+  title: "Sustainable Agriculture for Food Security and Global Health: Regenerative Systems and Smart Value Chains (symposium)"
+  funder: "DWIH + DAAD"
+  partners: "Coordinator: ZALF"
+  role: "Coordinator"
+  funding: 2915
+
+- acronym: "NEXT-Gen-EXPERT"
+  title: "Next-Generation Environmental and eXtended Tools for Extreme Events & Plant Resilience Assessment — FAIRagro use case"
+  funder: "DFG (FAIRagro)"
+  partners: "Coordinator: ZALF"
+  role: "Coordinator / PI"
+  positions: "1 postdoc (2 years)"
+  funding: 207473
   start: "2024-10"
   end: "2026-09"
-  role: "Coordinator & Principal Investigator"
-  funding: "170,006"
 
-- acronym: "SynPAI"
-  title: "Synergising Process-Based and Machine Learning Models for Accurate and Explainable Crop Yield Prediction along with Environmental Impact Assessment"
-  funder: "UK Research and Innovation (UKRI)"
-  start: "2024-02"
-  end: "2025-09"
-  role: "Principal Investigator"
-  funding: "£245,331"
-  url: "https://synpaim.wordpress.com/"
-
-- acronym: "R-FARM"
-  title: "Resilient Food Systems: AI, Remote Sensing and Crop Models in Harmony (2-day workshop)"
-  funder: "BMBF (Federal Ministry of Education and Research)"
-  start: ""
-  end: "2024"
-  role: "Coordinator"
-  funding: "€27,750"
-
-# ---------- long-term initiatives & collaborations ----------
-- acronym: "AgMIP"
-  title: "Agricultural Model Intercomparison and Improvement Project"
-  start: "2017"
-  end: "present"
-  role: "Participating modeller"
-  url: "https://agmip.org/"
-  kind: "network"
-
-- acronym: "FAIRagro"
-  title: "A community-driven initiative within the National Research Data Infrastructure (NFDI)"
-  funder: "NFDI"
-  role: "Project contributor"
-  url: "https://fairagro.net/en/about-us/our-mission/"
-  end: "present"
-  kind: "network"
-
-# ---------- earlier projects of group members (University of Bonn / EC-JRC) ----------
-- acronym: "COINS"
-  title: "Co-developing innovations for sustainable land management in West African smallholder farming systems"
-  funder: "BMBF (Federal Ministry of Education and Research)"
-  start: "2022-10"
-  end: "2026-09"
-  role: "Principal Investigator"
-  funding: "€377,269"
-  url: "https://www.lap.uni-bonn.de/en/research/projects/coins"
-
-- acronym: "DAKIS"
-  title: "Digital Agricultural Knowledge and Information System — innovative integration for landscape-smart agriculture"
-  funder: "BMBF (Federal Ministry of Education and Research)"
-  start: "2019"
-  end: "2024"
-  role: "Work Package Co-Leader"
-  funding: "€471,382"
-  url: "https://www.lap.uni-bonn.de/forschung/forschungsprojekte/dakis"
-
-- acronym: "Soil³"
-  title: "Sustainable Subsoil Management"
-  funder: "BMBF (Federal Ministry of Education and Research)"
-  start: "2018-08"
-  end: "2024-09"
-  role: "Work Package Leader"
-  funding: "€210,000"
-  url: "https://www.lap.uni-bonn.de/forschung/forschungsprojekte/BONARES_Unterboden"
-
-- acronym: "Sino-German"
-  title: "Combined strategies for reducing soil salinization and the mechanism of their interactive effects on crop growth (Sino-German Mobility Programme)"
-  funder: "DFG (German Research Foundation)"
-  start: "2020-01"
-  end: "2022-12"
-  role: "Work Package Leader"
-  funding: "€74,067"
-  url: "http://sinogermanscience.dfg.nsfc.cn/de/aktuelles/de_2020/"
-
-- acronym: "UPSCALERS"
-  title: "Upscaling Site-Specific Climate-smart Agriculture and Land use practices to Enhance Regional production Systems in West Africa"
-  funder: "African Union (AU)"
-  start: "2018-11"
-  end: "2021-01"
-  role: "Work Package Leader"
-  funding: "US$243,381"
-  url: "https://www.lap.uni-bonn.de/forschung/forschungsprojekte/listings/upscalers"
-
-- acronym: "USL Nutrient flows NRW"
-  title: "Modelling structural change and agricultural nutrient flows across scales in regions of North Rhine-Westphalia"
-  funder: "Environment Ministry NRW"
-  start: "2016-01"
-  end: "2018-04"
-  role: "Work Package Leader"
-  funding: "€95,968"
-  url: "https://www.lap.uni-bonn.de/forschung/forschungsprojekte/USL_stoffluesse_NRW"
-
-- acronym: "GlobE-BiomassWeb"
-  title: "Improving food security in Africa through increased system productivity of biomass-based value webs"
-  funder: "BMBF (Federal Ministry of Education and Research)"
-  start: "2013-06"
-  end: "2018-10"
-  role: "Work Package Leader"
-  funding: "€354,950"
-  url: "https://www.lap.uni-bonn.de/forschung/forschungsprojekte/GlobE_BiomassWeb"
-
-- acronym: "ULYSSES"
-  title: "Understanding and coping with food markets volatility towards more stable world and EU food systems"
-  funder: "EU 7th Framework Programme (FP7)"
-  start: "2012"
-  end: "2015"
-  url: "http://www.fp7-ulysses.eu/"
-
-- acronym: "E-AGRI"
-  title: "Crop Monitoring as an E-agriculture tool in developing countries"
-  funder: "EU 7th Framework Programme (FP7)"
-  start: "2011"
-  end: "2014"
-  url: "http://www.e-agri.info/"
-
-- acronym: "CAPRESE"
-  title: "Carbon Preservation and Sequestration in agricultural soils"
-  funder: "DG AGRI, European Commission — Joint Research Centre"
-  start: "2013"
-  end: "2013"
-
-- acronym: "GLOBCAST 2"
-  title: "Global yield forecasting system"
-  funder: "DG AGRI, European Commission — Joint Research Centre"
-  start: "2012"
-  end: "2013"
-
-- acronym: "PESETA-II"
-  title: "Projection of Economic impacts of climate change in Sectors of the EU based on bottom-up Analysis"
-  funder: "European Commission (Joint Research Centre) internal funding"
-  start: "2012-04"
-  end: "2013-03"
-  role: "Work Package Co-Leader"
-  funding: "€50,000"
-
-- acronym: "AVEMAC"
-  title: "Assessing Agriculture Vulnerabilities for the design of Effective Measures for Adaptation to Climate Change"
-  funder: "DG AGRI, European Commission"
-  start: "2011-04"
-  end: "2012-03"
-  role: "Work Package Co-Leader"
-  funding: "€60,000"
-
-- acronym: "IMPETUS"
-  title: "An Integrated Approach to the Efficient Management of Scarce Water Resources in West Africa"
-  funder: "BMBF (Federal Ministry of Education and Research)"
-  start: "2008"
-  end: "2010"
-  url: "http://www.impetus.uni-koeln.de/en/project.html"
-
-# ---------------------------------------------------------------------
 # TEMPLATE
 # - acronym: "NEWPROJ"
 #   title: "Full project title"
+#   call: "Call identifier"
 #   funder: "Funding body"
+#   partners: "Coordinator: … · Partners: …"
+#   role: "Work Package Leader / PI"
+#   positions: "1 PhD (3 years)"
+#   funding: 100000
 #   start: "2027-01"
 #   end: "2029-12"
-#   role: "Principal Investigator"
-#   funding: "€100,000"
 #   url: "https://..."
 #   featured: true
